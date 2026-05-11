@@ -7,7 +7,12 @@ dotenv.config({ path: path.join(__dirname, "..", ".env") });
 
 function parseAllowedOrigins(rawOrigins) {
   if (!rawOrigins || rawOrigins.trim() === "") {
-    return [];
+    // Safe defaults for this project if env is not configured on host.
+    return [
+      "https://abimanuanojan.github.io",
+      "http://localhost:5500",
+      "http://127.0.0.1:5500"
+    ];
   }
 
   return rawOrigins

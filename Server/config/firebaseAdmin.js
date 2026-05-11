@@ -8,15 +8,26 @@ const { env } = require("./env");
 
 function loadServiceAccountFromEnv() {
   if (env.firebaseServiceAccountJson) {
-    return JSON.parse(env.firebaseServiceAccountJson);
+    try {
+      return JSON.parse(env.firebaseServiceAccountJson);
+    } catch (error) {
+      console.warn("Invalid FIREBASE_SERVICE_ACCOUNT_JSON. Falling back to other credential options.");
+    }
   }
 
   if (env.firebaseServiceAccountPath) {
     const resolvedPath = path.isAbsolute(env.firebaseServiceAccountPath)
       ? env.firebaseServiceAccountPath
       : path.join(__dirname, "..", env.firebaseServiceAccountPath);
-    const fileContent = fs.readFileSync(resolvedPath, "utf8");
-    return JSON.parse(fileContent);
+    try {
+      const fileContent = fs.readFileSync(resolvedPath, "utf8");
+      return JSON.parse(fileContent);
+    } catch (error) {
+      console.warn(
+        `Could not load Firebase service account from path: ${resolvedPath}. ` +
+          "Falling back to other credential options."
+      );
+    }
   }
 
   if (env.firebaseProjectId && env.firebaseClientEmail && env.firebasePrivateKey) {
