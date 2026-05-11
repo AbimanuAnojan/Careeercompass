@@ -587,21 +587,7 @@
       sendMessage();
     }
 
-    const API_BASE_URL = (() => {
-      const configuredBase = window.__CAREERCOMPASS_API_BASE_URL__;
-      if (typeof configuredBase === "string" && configuredBase.trim()) {
-        return configuredBase.replace(/\/+$/, "");
-      }
-
-      const { protocol, hostname, origin } = window.location;
-      const isLocalhost = hostname === "localhost" || hostname === "127.0.0.1";
-
-      if (protocol === "file:" || isLocalhost) {
-        return "http://localhost:3000";
-      }
-
-      return "https://careeercompass.onrender.com";
-    })();
+    const API_BASE_URL = "https://careeercompass.onrender.com";
 
     const CHAT_API_URL = `${API_BASE_URL}/api/chat`;
     const CHAT_HISTORY_API_URL = `${API_BASE_URL}/api/chats`;
