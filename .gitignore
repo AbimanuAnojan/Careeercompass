@@ -1,0 +1,35 @@
+﻿# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+*.pem
+*.key
+*.p12
+*service-account*.json
+*credentials*.json
+
+# Caches
+.npm-cache/
+**/.npm-cache/
+.cache/
+**/.cache/
+
+# Build/test artifacts
+dist/
+build/
+coverage/
+**/dist/
+**/build/
+**/coverage/
+
+# Logs and OS/editor artifacts
+*.log
+.DS_Store
+Thumbs.db

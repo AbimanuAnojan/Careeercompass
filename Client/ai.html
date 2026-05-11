@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CareerCompass - AI</title>
+  <link rel="stylesheet" href="careeeeeeercom.css" id="hfiehiehfief">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+  <style>
+    .hero-story {
+      min-height: calc(100vh - 80px);
+      padding: 150px 0 90px;
+      display: flex;
+      align-items: flex-start;
+      position: relative;
+      text-align: center;
+    }
+
+    .hero-story .hero-content {
+      display: grid;
+      justify-items: center;
+      gap: 0.9rem;
+      width: 100%;
+    }
+
+    .hero-story .hero-title {
+      margin-top: 0.3rem;
+      text-align: center;
+    }
+
+    .hero-story .hero-sub {
+      max-width: 760px;
+    }
+
+    .hero-story .hero-buttons {
+      margin-top: 1.15rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    .section-story {
+      padding: 90px 0 120px;
+    }
+
+    .section-story .section-header {
+      margin-bottom: 2.75rem;
+      text-align: center;
+    }
+
+    #chat-area .container {
+      width: min(96vw, 1320px);
+      max-width: 1320px;
+    }
+
+    .chat-wrap {
+      width: 100%;
+      max-width: 1320px;
+      --chat-panel-height: clamp(760px, 78vh, 900px);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(250px, 290px) minmax(0, 1fr);
+      gap: 1rem;
+      align-items: stretch;
+    }
+
+    .chat-side,
+    .chat-main {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 14px;
+      backdrop-filter: blur(8px);
+    }
+
+    .chat-side {
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      height: var(--chat-panel-height);
+      overflow-y: hidden;
+    }
+
+    .chat-main {
+      height: var(--chat-panel-height);
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .chat-head {
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .status-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #64ffda;
+      box-shadow: 0 0 10px rgba(100, 255, 218, 0.8);
+      display: inline-block;
+      margin-right: 0.5rem;
+    }
+
+    .chat-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .msg {
+      max-width: 80%;
+      border-radius: 12px;
+      padding: 0.8rem 0.9rem;
+      line-height: 1.5;
+      font-size: 0.98rem;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .msg.user {
+      align-self: flex-end;
+      background: linear-gradient(135deg, #6366f1, #7c83ff);
+      color: #fff;
+      border-bottom-right-radius: 4px;
+    }
+
+    .msg.ai {
+      align-self: flex-start;
+      background: rgba(13, 22, 45, 0.85);
+      border: 1px solid rgba(99, 102, 241, 0.35);
+      color: rgba(255, 255, 255, 0.92);
+      border-bottom-left-radius: 4px;
+    }
+
+    .msg.ai p {
+      margin: 0.45rem 0;
+    }
+
+    .msg.ai p:first-child {
+      margin-top: 0;
+    }
+
+    .msg.ai p:last-child {
+      margin-bottom: 0;
+    }
+
+    .msg.ai ul,
+    .msg.ai ol {
+      margin: 0.45rem 0 0.45rem 1.1rem;
+    }
+
+    .msg.ai pre {
+      margin: 0.45rem 0;
+      padding: 0.55rem 0.65rem;
+      background: rgba(0, 0, 0, 0.24);
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+
+    .msg.ai code {
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 0.92em;
+    }
+
+    .typing {
+      font-size: 0.9rem;
+      opacity: 0.75;
+      padding-left: 0.2rem;
+    }
+
+    .chat-input {
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 0.9rem;
+      display: flex;
+      gap: 0.65rem;
+      align-items: center;
+    }
+
+    .chat-input textarea {
+      flex: 1;
+      min-height: 46px;
+      max-height: 120px;
+      resize: vertical;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.05);
+      color: #fff;
+      padding: 0.8rem;
+      font-family: inherit;
+      font-size: 0.97rem;
+      outline: none;
+    }
+
+    .quick-chip {
+      width: 100%;
+      text-align: left;
+      background: rgba(99, 102, 241, 0.12);
+      border: 1px solid rgba(99, 102, 241, 0.4);
+      color: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      padding: 0.65rem 0.75rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font: inherit;
+      font-size: 0.92rem;
+    }
+
+    .quick-chip:hover {
+      background: rgba(99, 102, 241, 0.22);
+      transform: translateY(-1px);
+    }
+
+    .context-select {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.05);
+      color: #3300ff;
+      padding: 0.6rem 0.7rem;
+      font: inherit;
+      font-size: 0.93rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero-story {
+        padding: 130px 0 70px;
+      }
+
+      .section-story {
+        padding: 70px 0 95px;
+      }
+
+      .chat-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .chat-side {
+        height: auto;
+        overflow: visible;
+      }
+
+      .chat-main {
+        height: min(72vh, 700px);
+      }
+    }
+  </style>
+</head>
+
+<body >
+
+  <div class="global-bg">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <div class="particles">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <nav class="nav">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <label class="theme-switch" title="Switch theme">
+          <input type="checkbox" onchange="window.location='aidark.html'" aria-label="Switch theme">
+          <span class="theme-switch-slider"></span>
+        </label>
+        <a href="careercom.html">CareerCompass</a></div>
+      <div class="nav-links">
+        <a href="careercom.html">Home</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="ai.html">AI</a>
+        <a href="javascript:void(0)" class="login-btn" onclick="login()">Login</a>
+        <a href="javascript:void(0)" class="signup-btn" onclick="signup()">Sign Up</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero-story">
+    
+    <div class="container hero-content reveal">
+      <p style="display:inline-block; padding:0.4rem 0.75rem; border-radius:999px; border:1px solid rgba(100,255,218,0.55); color:#64ffda; font-weight:700; margin-bottom:1rem;">AI CHAT ACTIVE</p>
+      <h1 class="hero-title">
+        <span>Your Personal</span><br>
+        <span>AI Career Mentor</span>
+      </h1>
+      <p class="hero-sub">
+        Ask career questions in plain language and get focused guidance for streams, degrees, exams, and next steps.
+      </p>
+      <div class="hero-buttons">
+        <button class="btn primary" onclick="goToQuiz()">Take Quiz First</button>
+        <button class="btn secondary" onclick="startAIDemo()">Start AI Chat</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-story" id="chat-area">
+    <div class="container">
+      <div class="section-header">
+        <h2>AI Career Chat</h2>
+        <p>Ask your question and get practical next-step guidance instantly</p>
+      </div>
+
+      <div class="chat-wrap">
+        <aside class="chat-side">
+          <div>
+            <h3 style="margin-bottom:0.5rem;">Quick Prompts</h3>
+            <p class="muted" style="font-size:0.9rem;">Tap a prompt to ask faster.</p>
+          </div>
+
+          <button class="quick-chip" onclick="useQuickPrompt('I am in 12th PCM. Should I prepare for JEE or focus on boards?')">12th PCM plan: JEE vs Boards</button>
+          <button class="quick-chip" onclick="useQuickPrompt('I am confused between multiple career options. How do I choose the right one step by step?')">How to choose the right career</button>
+          <button class="quick-chip" onclick="useQuickPrompt('Can you create a realistic 30-day study and skill plan for my current level and goal?')">30-day study and skill plan</button>
+          <button class="quick-chip" onclick="useQuickPrompt('What entrance exams should I prepare for if I want higher studies abroad?')">Higher studies abroad exams</button>
+
+          <div style="margin-top:0.5rem;">
+            <h3 style="margin-bottom:0.65rem;">Context</h3>
+            <select id="eduLevel" class="context-select">
+              <option value="">Select education level</option>
+              <option>10th</option>
+              <option>11th</option>
+              <option>12th</option>
+              <option>Undergraduate</option>
+              <option>Postgraduate</option>
+            </select>
+            <select id="goalType" class="context-select" style="margin-top:0.5rem;">
+              <option value="">Select primary goal</option>
+              <option>Job</option>
+              <option>Higher studies</option>
+              <option>Government exams</option>
+              <option>Not sure yet</option>
+            </select>
+            <button class="btn secondary" style="width:100%; margin-top:0.7rem;" onclick="applyContext()">Apply Context</button>
+          </div>
+
+          <div style="margin-top:0.5rem;">
+            <h3 style="margin-bottom:0.65rem;">Previous Chats</h3>
+            <p class="muted" style="font-size:0.85rem; margin-bottom:0.65rem;">Login users can reopen previous secure chats.</p>
+            <button class="btn secondary" style="width:100%; margin-bottom:0.65rem;" onclick="refreshChatHistory()">Refresh History</button>
+            <select id="historyFileSelect" class="context-select">
+              <option value="">No chat history loaded</option>
+            </select>
+            <div style="display:flex; gap:0.5rem; margin-top:0.65rem;">
+              <button class="btn secondary" style="flex:1;" onclick="openSelectedHistory()">Open</button>
+              <button class="btn secondary" style="flex:1;" onclick="downloadSelectedHistory()">Download</button>
+            </div>
+          </div>
+        </aside>
+
+        <div class="chat-main">
+          <div class="chat-head">
+            <div><span class="status-dot"></span><strong>CareerCompass AI Mentor</strong></div>
+            <button class="btn secondary" style="padding:0.45rem 0.85rem; font-size:0.85rem;" onclick="clearChat()">New Chat</button>
+          </div>
+
+          <div id="chatBox" class="chat-body"></div>
+          <div id="typingText" class="typing" style="display:none;">AI is thinking...</div>
+
+          <div class="chat-input">
+            <textarea id="messageInput" placeholder="Type your career question here..."></textarea>
+            <button class="btn primary" id="sendBtn" onclick="sendMessage()">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-bg"></div>
+    <div class="container footer-content">
+      <h3>CareerCompass</h3>
+      <p>Helping students find clarity, direction, and confidence.</p>
+      <div class="footer-links">
+        <a href="careercom.html">Home</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="ai.html">AI</a>
+        <a href="javascript:void(0)" onclick="login()">Login</a>
+        <a href="javascript:void(0)" onclick="signup()">Sign Up</a>
+      </div>
+      <p class="copy">© 2026 CareerCompass</p>
+    </div>
+  </footer>
+
+  <script>
+    function goToQuiz() {
+      window.location.href = "quiz.html";
+    }
+    function startAIDemo() {
+      const area = document.getElementById("chat-area");
+      if (area) area.scrollIntoView({ behavior: "smooth", block: "start" });
+      const input = document.getElementById("messageInput");
+      if (input) setTimeout(() => input.focus(), 400);
+    }
+
+    const chatBox = document.getElementById("chatBox");
+    const messageInput = document.getElementById("messageInput");
+    const chatBody = chatBox;
+    const chatInput = messageInput;
+    const typingText = document.getElementById("typingText");
+    const historyFileSelect = document.getElementById("historyFileSelect");
+    const conversationHistory = [];
+    const historyFileCache = [];
+    let loggedInUserId = "";
+    const CHAT_BOX_STORAGE_PREFIX = "careercompass-chatbox";
+    const CHAT_BOX_MAX_TURNS = 120;
+
+    function sanitizeConversationHistory(rawTurns) {
+      if (!Array.isArray(rawTurns)) return [];
+      const normalized = rawTurns
+        .filter((turn) => turn && typeof turn.text === "string" && (turn.role === "user" || turn.role === "assistant"))
+        .map((turn) => ({ role: turn.role, text: turn.text }));
+
+      const deduped = [];
+      normalized.forEach((turn) => {
+        const prev = deduped[deduped.length - 1];
+        if (prev && prev.role === turn.role && prev.text === turn.text) {
+          return;
+        }
+        deduped.push(turn);
+      });
+
+      return deduped.slice(-CHAT_BOX_MAX_TURNS);
+    }
+
+    function getChatBoxStorageKey(userIdOverride = "") {
+      const effectiveUserId = userIdOverride || loggedInUserId || "guest";
+      return `${CHAT_BOX_STORAGE_PREFIX}:${effectiveUserId}`;
+    }
+
+    function saveChatBoxStateToLocal() {
+      try {
+        localStorage.setItem(getChatBoxStorageKey(), JSON.stringify(conversationHistory));
+      } catch (error) {
+        console.error("Could not save chat box state:", error);
+      }
+    }
+
+    function saveChatBoxState() {
+      saveChatBoxStateToLocal();
+    }
+
+    function renderConversationFromState() {
+      chatBody.innerHTML = "";
+
+      if (conversationHistory.length === 0) {
+        addMessage("ai", "Hi, I am your CareerCompass AI mentor.\nTell me your education level and goal, and I will give you a practical plan.");
+        return;
+      }
+
+      conversationHistory.forEach((turn) => {
+        if (!turn || typeof turn.text !== "string") return;
+        addMessage(turn.role === "assistant" ? "ai" : "user", turn.text);
+      });
+    }
+
+    function restoreChatBoxStateFromLocal(userIdOverride = "") {
+      const restored = [];
+      try {
+        const saved = localStorage.getItem(getChatBoxStorageKey(userIdOverride));
+        const parsed = JSON.parse(saved || "[]");
+        return sanitizeConversationHistory(parsed);
+      } catch (error) {
+        console.error("Could not restore chat box state:", error);
+        return restored;
+      }
+    }
+
+    function setConversationHistory(nextTurns, persist = false) {
+      conversationHistory.length = 0;
+      conversationHistory.push(...sanitizeConversationHistory(nextTurns));
+      renderConversationFromState();
+      if (persist) {
+        saveChatBoxState();
+      }
+    }
+
+    function restoreChatBoxState() {
+      const localTurns = restoreChatBoxStateFromLocal();
+      setConversationHistory(localTurns, false);
+    }
+
+    window.setChatConversationState = function(turns) {
+      setConversationHistory(turns, false);
+    };
+
+    function addMessage(role, text) {
+      const bubble = document.createElement("div");
+      bubble.className = `msg ${role}`;
+
+      if (role === "ai") {
+        if (window.marked && window.DOMPurify) {
+          const markdownHtml = marked.parse(text || "", {
+            breaks: true,
+            gfm: true
+          });
+          bubble.innerHTML = DOMPurify.sanitize(markdownHtml);
+        } else {
+          bubble.textContent = text;
+        }
+      } else {
+        bubble.textContent = text;
+      }
+
+      chatBody.appendChild(bubble);
+      chatBody.scrollTop = chatBody.scrollHeight;
+    }
+
+    function sleep(ms) {
+      return new Promise((resolve) => setTimeout(resolve, ms));
+    }
+
+    function renderAIBubbleContent(bubble, text) {
+      if (window.marked && window.DOMPurify) {
+        const markdownHtml = marked.parse(text || "", {
+          breaks: true,
+          gfm: true
+        });
+        bubble.innerHTML = DOMPurify.sanitize(markdownHtml);
+      } else {
+        bubble.textContent = text || "";
+      }
+    }
+
+    async function addAnimatedAIMessage(text) {
+      const bubble = document.createElement("div");
+      bubble.className = "msg ai";
+      chatBody.appendChild(bubble);
+
+      const fullText = String(text || "");
+      if (!fullText) {
+        renderAIBubbleContent(bubble, fullText);
+        return;
+      }
+
+      let index = 0;
+      while (index < fullText.length) {
+        const remaining = fullText.length - index;
+        const chunkSize = remaining > 450 ? 8 : remaining > 250 ? 6 : remaining > 120 ? 4 : 2;
+        index = Math.min(fullText.length, index + chunkSize);
+        bubble.textContent = fullText.slice(0, index);
+        chatBody.scrollTop = chatBody.scrollHeight;
+        await sleep(28);
+      }
+
+      renderAIBubbleContent(bubble, fullText);
+      chatBody.scrollTop = chatBody.scrollHeight;
+    }
+
+    function useQuickPrompt(text) {
+      chatInput.value = text;
+      sendMessage();
+    }
+
+    const API_BASE_URL = (() => {
+      const configuredBase = window.__CAREERCOMPASS_API_BASE_URL__;
+      if (typeof configuredBase === "string" && configuredBase.trim()) {
+        return configuredBase.replace(/\/+$/, "");
+      }
+
+      const { protocol, hostname, origin } = window.location;
+      const isLocalhost = hostname === "localhost" || hostname === "127.0.0.1";
+
+      if (protocol === "file:" || isLocalhost) {
+        return "http://localhost:3000";
+      }
+
+      return origin;
+    })();
+
+    const CHAT_API_URL = `${API_BASE_URL}/api/chat`;
+    const CHAT_HISTORY_API_URL = `${API_BASE_URL}/api/chats`;
+    let isSendingMessage = false;
+
+    function getNetworkErrorMessage(error, fallbackMessage) {
+      if (error && typeof error.message === "string" && error.message.trim()) {
+        return error.message;
+      }
+      return fallbackMessage;
+    }
+
+    async function getAuthHeaders(forceRefresh = false) {
+      if (typeof window.getFirebaseIdToken !== "function") {
+        throw new Error("Authentication is not ready. Please refresh and login again.");
+      }
+
+      const idToken = await window.getFirebaseIdToken(forceRefresh);
+      return {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${idToken}`
+      };
+    }
+
+    window.updateChatUser = async function(user) {
+      loggedInUserId = user?.uid || "";
+
+      const localTurns = restoreChatBoxStateFromLocal();
+      setConversationHistory(localTurns, false);
+
+      if (loggedInUserId) {
+        refreshChatHistory();
+      } else {
+        resetHistorySelect("Login to load chat history");
+      }
+    };
+
+    function resetHistorySelect(defaultLabel) {
+      historyFileCache.length = 0;
+      historyFileSelect.innerHTML = "";
+      const option = document.createElement("option");
+      option.value = "";
+      option.textContent = defaultLabel;
+      historyFileSelect.appendChild(option);
+    }
+
+    function formatHistoryLabel(chatInfo) {
+      const date = new Date(chatInfo.createdAt || "");
+      const safeDate = Number.isNaN(date.getTime()) ? "Unknown time" : date.toLocaleString();
+      const preview = (chatInfo.userMessage || "Chat message").slice(0, 40);
+      return `${preview}... (${safeDate})`;
+    }
+
+    function requireLoginForHistory() {
+      if (loggedInUserId) {
+        return true;
+      }
+      alert("Please login first to access your previous chats.");
+      return false;
+    }
+
+    async function fetchHistoryList() {
+      let response;
+      try {
+        response = await fetch(`${CHAT_HISTORY_API_URL}?limit=30`, {
+          method: "GET",
+          headers: await getAuthHeaders()
+        });
+      } catch (error) {
+        throw new Error(getNetworkErrorMessage(error, "Could not connect to the history server."));
+      }
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok) {
+        throw new Error(data?.error || "Failed to fetch history list.");
+      }
+      return Array.isArray(data.chats) ? data.chats : [];
+    }
+
+    window.refreshChatHistory = async function() {
+      if (!requireLoginForHistory()) return;
+
+      try {
+        const chats = await fetchHistoryList();
+        historyFileCache.length = 0;
+        historyFileCache.push(...chats);
+
+        historyFileSelect.innerHTML = "";
+        if (chats.length === 0) {
+          const emptyOption = document.createElement("option");
+          emptyOption.value = "";
+          emptyOption.textContent = "No chat history yet";
+          historyFileSelect.appendChild(emptyOption);
+          return;
+        }
+
+        const placeholder = document.createElement("option");
+        placeholder.value = "";
+        placeholder.textContent = "Select a chat";
+        historyFileSelect.appendChild(placeholder);
+
+        chats.forEach((chatInfo) => {
+          const option = document.createElement("option");
+          option.value = chatInfo.id;
+          option.textContent = formatHistoryLabel(chatInfo);
+          historyFileSelect.appendChild(option);
+        });
+      } catch (error) {
+        console.error("History list error:", error);
+        alert(error.message || "Could not load chat history.");
+      }
+    };
+
+    window.openSelectedHistory = async function() {
+      if (!requireLoginForHistory()) return;
+      const chatId = historyFileSelect.value;
+      if (!chatId) return;
+
+      try {
+        const selectedChat = historyFileCache.find((chat) => chat.id === chatId);
+        if (!selectedChat) {
+          throw new Error("Could not find selected chat.");
+        }
+
+        const snapshotTurns = sanitizeConversationHistory(selectedChat.historySnapshot);
+        if (snapshotTurns.length > 0) {
+          setConversationHistory(snapshotTurns, true);
+          return;
+        }
+
+        chatBody.innerHTML = "";
+        addMessage("user", selectedChat.userMessage || "");
+        addMessage("ai", selectedChat.assistantReply || "");
+      } catch (error) {
+        console.error("Open history error:", error);
+        alert(error.message || "Could not open selected chat.");
+      }
+    };
+
+    window.downloadSelectedHistory = async function() {
+      if (!requireLoginForHistory()) return;
+      const chatId = historyFileSelect.value;
+      if (!chatId) return;
+
+      try {
+        const selectedChat = historyFileCache.find((chat) => chat.id === chatId);
+        if (!selectedChat) {
+          throw new Error("Could not find selected chat.");
+        }
+
+        const content = [
+          `Time: ${selectedChat.createdAt || "Unknown"}`,
+          `USER: ${selectedChat.userMessage || ""}`,
+          `AI: ${selectedChat.assistantReply || ""}`,
+          ""
+        ].join("\n");
+
+        const blob = new Blob([content], { type: "text/plain" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = `chat-${chatId}.txt`;
+        a.click();
+        URL.revokeObjectURL(url);
+      } catch (error) {
+        console.error("Download history error:", error);
+        alert(error.message || "Could not download selected chat.");
+      }
+    };
+
+    async function fetchAIReply(message, history) {
+      let response;
+      try {
+        response = await fetch(CHAT_API_URL, {
+          method: "POST",
+          headers: await getAuthHeaders(false),
+          body: JSON.stringify({ message, history })
+        });
+      } catch (error) {
+        throw new Error(getNetworkErrorMessage(error, `Could not connect to AI server at ${CHAT_API_URL}.`));
+      }
+
+      let data = await response.json().catch(() => ({}));
+      if (!response.ok && response.status === 401 && (data?.code || "").startsWith("auth/")) {
+        response = await fetch(CHAT_API_URL, {
+          method: "POST",
+          headers: await getAuthHeaders(true),
+          body: JSON.stringify({ message, history })
+        });
+        data = await response.json().catch(() => ({}));
+      }
+
+      if (!response.ok) {
+        throw new Error(data?.error || "Chat request failed.");
+      }
+      return data?.reply || "I could not generate a response right now.";
+    }
+
+    async function sendMessage() {
+      if (isSendingMessage) return;
+      if (!loggedInUserId) {
+        alert("Please login to chat securely.");
+        return;
+      }
+      const text = chatInput.value.trim();
+      if (!text) return;
+      isSendingMessage = true;
+      const sendBtn = document.getElementById("sendBtn");
+      sendBtn.disabled = true;
+
+      addMessage("user", text);
+      conversationHistory.push({ role: "user", text });
+      saveChatBoxState();
+      chatInput.value = "";
+
+      typingText.style.display = "block";
+
+      try {
+        let lat = null;
+        let lng = null;
+
+        if (navigator.geolocation) {
+          const getPos = () => {
+            return new Promise((resolve, reject) => {
+              navigator.geolocation.getCurrentPosition(resolve, reject, {
+                enableHighAccuracy: false,
+                timeout: 8000,
+                maximumAge: 300000
+              });
+            });
+          };
+
+          try {
+            const position = await getPos();
+            lat = position.coords.latitude;
+            lng = position.coords.longitude;
+          } catch (geoError) {
+            console.warn("Geolocation unavailable:", geoError);
+          }
+        }
+
+        const locationPayload = lat != null && lng != null ? [lat, lng] : null;
+        const reply = await fetchAIReply(text, [conversationHistory, locationPayload]);
+        typingText.style.display = "none";
+        await addAnimatedAIMessage(reply);
+        conversationHistory.push({ role: "assistant", text: reply });
+        saveChatBoxState();
+      } catch (error) {
+        console.error("AI chat error:", error);
+        typingText.style.display = "none";
+        addMessage("ai", `I could not reach the AI server at ${CHAT_API_URL}. Please ensure the backend is running and try again.`);
+      } finally {
+        sendBtn.disabled = false;
+        isSendingMessage = false;
+      }
+    }
+
+    function applyContext() {
+      const edu = document.getElementById("eduLevel").value;
+      const goal = document.getElementById("goalType").value;
+      if (!edu && !goal) return;
+      const contextText = `Context set: ${edu || "education level not selected"}, ${goal || "goal not selected"}.`;
+      addMessage("user", contextText);
+      chatInput.value = `I am in ${edu || "student level"} and my goal is ${goal || "not sure"}. Give me direction.`;
+      sendMessage();
+    }
+
+    function clearChat() {
+      conversationHistory.length = 0;
+      saveChatBoxState();
+      renderConversationFromState();
+    }
+
+    chatInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" && !e.shiftKey) {
+        e.preventDefault();
+        sendMessage();
+      }
+    });
+
+    restoreChatBoxState();
+    resetHistorySelect("Login to load chat history");
+
+    const reveals = document.querySelectorAll('.reveal');
+    function revealOnScroll() {
+      reveals.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 80) el.classList.add('show');
+      });
+    }
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+
+    const nav = document.querySelector('.nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    });
+
+    document.querySelectorAll('.btn').forEach(btn => {
+      btn.addEventListener('mousemove', e => {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        btn.style.transform = `translate(${(x - rect.width / 2) / 8}px, ${(y - rect.height / 2) / 8}px)`;
+      });
+      btn.addEventListener('mouseleave', () => {
+        btn.style.transform = 'translate(0,0)';
+      });
+    });
+  </script>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, setPersistence, browserLocalPersistence }
+      from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "YOUR_FIREBASE_WEB_API_KEY",
+      authDomain: "rcompass2.firebaseapp.com",
+      projectId: "rcompass2",
+      storageBucket: "rcompass2.firebasestorage.app",
+      messagingSenderId: "596937236940",
+      appId: "1:596937236940:web:e30234dc965d41a002bd69",
+      measurementId: "G-97S2FEKL1W"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth();
+    const provider = new GoogleAuthProvider();
+
+    // Frontend uses this token helper for secure backend fetch() calls.
+    window.getFirebaseIdToken = async function(forceRefresh = false) {
+      const user = auth.currentUser;
+      if (!user) {
+        throw new Error("Please login to continue.");
+      }
+      return user.getIdToken(Boolean(forceRefresh));
+    };
+
+    function updateAuthUi(user) {
+      const authLinks = document.querySelectorAll('a[onclick*="login"], a[onclick*="signup"]');
+      authLinks.forEach((link) => {
+        const original = (link.dataset.originalText || link.textContent || "").trim();
+        if (!link.dataset.originalText) {
+          link.dataset.originalText = original;
+        }
+
+        const isSignupLink = /sign\s*up/i.test(link.dataset.originalText);
+        if (user) {
+          if (isSignupLink) {
+            link.style.display = "none";
+          } else {
+            link.style.display = "";
+            link.textContent = "Log out";
+          }
+        } else {
+          link.style.display = "";
+          link.textContent = link.dataset.originalText;
+        }
+      });
+    }
+
+    window.logout = async function () {
+      try {
+        await signOut(auth);
+      } catch (error) {
+        console.error(error);
+        alert(error.message);
+      }
+    };
+
+    window.login = function () {
+      if (auth.currentUser) {
+        logout();
+        return;
+      }
+
+      signInWithPopup(auth, provider)
+        .then((result) => {
+          const user = result.user;
+          window.updateChatUser(user);
+          alert("Login working ✅");
+        })
+        .catch((error) => {
+          console.error(error);
+          alert(error.message);
+        });
+    };
+
+    window.signup = function () {
+      if (auth.currentUser) {
+        logout();
+        return;
+      }
+      login();
+    };
+
+    setPersistence(auth, browserLocalPersistence).catch((error) => {
+      console.error("Persistence setup failed:", error);
+    });
+
+    onAuthStateChanged(auth, async (user) => {
+      updateAuthUi(user);
+      if (user) {
+        console.log("User already logged in:", user.displayName);
+        await window.updateChatUser(user);
+      } else {
+        await window.updateChatUser(null);
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CareerCompass</title>
+
+  <link rel="stylesheet" href="careeeeeeercom.css" id="dhidshidshidhis">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body  >
+  <!-- Global orbs -->
+  <div class="global-bg">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Floating particles -->
+  <div class="particles">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <label class="theme-switch" title="Switch theme">
+          <input type="checkbox" onchange="window.location='careercomdark.html'" aria-label="Switch theme">
+          <span class="theme-switch-slider"></span>
+        </label>
+        <a href="careercom.html">CareerCompass</a></div>
+      <div class="nav-links">
+        <a href="quiz.html">Quiz</a>
+        <a href="ai.html">AI</a>
+        <a href="javascript:void(0)" class="login-btn" onclick="login()">Login</a>
+        <a href="javascript:void(0)" class="signup-btn" onclick="login()">Sign Up</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero story">
+  
+
+    <div class="container hero-content reveal">
+      <h1 class="hero-title">
+        <span style="text-align: center;">   Find Your Path.</span><br>
+        <span>Shape Your Future.</span>
+      </h1>
+
+      <p class="hero-sub">
+        CareerCompass is more than a tool — it's a guided system designed to help you
+        understand your strengths, explore real career paths, and make decisions that
+        actually align with your future.
+      </p>
+
+      <p class="hero-sub secondary-text">
+        Whether you're choosing your stream, preparing for competitive exams,
+        or just feeling lost — this platform helps you move forward with clarity.
+      </p>
+
+      <div class="hero-buttons">
+        <button class="btn primary" onclick="goToQuiz()">Start Quiz</button>
+        <button class="btn secondary" onclick="goToAI()">Talk with AI</button>
+      </div>
+      <div class="bg-blobs">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- OPTIONS -->
+  <section class="section story">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <h2>Two Powerful Ways to Discover Your Future</h2>
+        <p>Choose the approach that fits how you think and explore</p>
+      </div>
+
+      <div class="card-grid">
+
+        <div class="card reveal">
+          <h3>📊 Take a Smart Quiz</h3>
+          <p>
+            Our structured quiz adapts to your level and digs deeper into your
+            interests, strengths, and academic preferences.
+          </p>
+          <p class="muted">
+            Instead of generic suggestions, you get insights tailored specifically to you.
+          </p>
+          <button class="btn small primary" onclick="goToQuiz()">Start Quiz</button>
+        </div>
+
+        <div class="card">
+          <h3>🤖 Talk with AI</h3>
+          <p>
+            Have a real conversation about your future. Ask questions, explore careers,
+            and get guidance instantly.
+          </p>
+          <p class="muted">
+            It’s like having a personal career mentor available 24/7.
+          </p>
+          <button class="btn small primary" onclick="goToAI()">Start Chat</button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HOW -->
+  <section class="section alt story">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <h2>How CareerCompass Works</h2>
+        <p>A simple, guided process designed to remove confusion</p>
+      </div>
+
+      <div class="steps">
+
+        <div class="step reveal">
+          <span>01</span>
+          <h4>Understand Where You Are</h4>
+          <p>We begin by identifying your current academic level</p>
+        </div>
+
+        <div class="step reveal">
+          <span>02</span>
+          <h4>Explore What Fits You</h4>
+          <p>We analyze your interests, strengths, and preferences</p>
+        </div>
+
+        <div class="step reveal">
+          <span>03</span>
+          <h4>Guide You Forward</h4>
+          <p>You receive clear, structured career paths to explore</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- CTA -->
+  <section class="cta story">
+    <div class="cta-bg">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="container reveal">
+      <h2>Ready to Discover Your Future?</h2>
+      <p>Start your journey with CareerCompass</p>
+
+      <div class="hero-buttons">
+        <button class="btn primary" onclick="goToQuiz()">Start Quiz</button>
+        <button class="btn secondary" onclick="goToAI()">Chat with AI</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-bg"></div>
+
+    <div class="container footer-content">
+      <h3>CareerCompass</h3>
+      <p>Helping students find clarity, direction, and confidence.</p>
+
+      <div class="footer-links">
+        <a href="careercom.html">Home</a>
+        <a href="javascript:void(0)" onclick="goToQuiz()">Quiz</a>
+        <a href="ai.html">AI</a>
+        <a href="javascript:void(0)" onclick="login()">Login</a>
+        <a href="javascript:void(0)" onclick="signup()">Sign Up</a>
+      </div>
+
+      <p class="copy">© 2026 CareerCompass</p>
+    </div>
+  </footer>
+
+  <script>
+    function goToQuiz() {
+      window.location.href = "quiz.html";
+    }
+    function goToAI() {
+      window.location.href = "ai.html";
+    }
+
+    const reveals = document.querySelectorAll('.reveal');
+
+    function revealOnScroll() {
+      reveals.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 80) {
+          el.classList.add('show');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+
+    /* NAVBAR SCROLL EFFECT */
+    const nav = document.querySelector('.nav');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+
+    /* MAGNETIC BUTTON EFFECT */
+    const buttons = document.querySelectorAll('.btn');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('mousemove', e => {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        btn.style.transform = `translate(${(x - rect.width / 2) / 8}px, ${(y - rect.height / 2) / 8}px)`;
+      });
+
+      btn.addEventListener('mouseleave', () => {
+        btn.style.transform = 'translate(0,0)';
+      });
+    });
+  </script>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+
+      /* HERO BACKGROUND MOVE */
+      const heroBg = document.querySelector('.hero-bg');
+      if (heroBg) {
+        heroBg.style.transform = `translateY(${scrollY * 0.3}px)`;
+      }
+
+      /* PARALLAX CARDS */
+      document.querySelectorAll('.card').forEach((card, i) => {
+        card.style.transform = `translateY(${scrollY * (0.02 * (i + 1))}px)`;
+      });
+    });
+  </script>
+
+  <script>
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        card.style.setProperty('--x', x + 'px');
+        card.style.setProperty('--y', y + 'px');
+      });
+    });
+  </script>
+
+  <script>
+    const sections = document.querySelectorAll('.story');
+
+    function handleScroll() {
+      sections.forEach(sec => {
+        const rect = sec.getBoundingClientRect();
+
+        if (rect.top < window.innerHeight - 120) {
+          sec.classList.add('show');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('load', handleScroll);
+  </script>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const scroll = window.scrollY;
+      document.querySelectorAll('.bg-blobs span').forEach((blob, i) => {
+        blob.style.transform = `translateY(${scroll * (0.05 * (i + 1))}px)`;
+      });
+    });
+  </script>
+
+  <script>
+    const cta = document.querySelector('.cta');
+
+    cta.addEventListener('mousemove', e => {
+      const rect = cta.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      cta.style.setProperty('--x', x + 'px');
+      cta.style.setProperty('--y', y + 'px');
+    });
+  </script>
+
+  <div class="cursor-glow"></div>
+
+  <script>
+    const glow = document.querySelector('.cursor-glow');
+
+    window.addEventListener('mousemove', e => {
+      glow.style.left = e.clientX + 'px';
+      glow.style.top = e.clientY + 'px';
+    });
+  </script>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, setPersistence, browserLocalPersistence }
+      from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+    import { getFirestore, doc, setDoc }
+      from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+    // YOUR CONFIG
+    const firebaseConfig = {
+      apiKey: "YOUR_FIREBASE_WEB_API_KEY",
+      authDomain: "rcompass2.firebaseapp.com",
+      projectId: "rcompass2",
+      storageBucket: "rcompass2.firebasestorage.app",
+      messagingSenderId: "596937236940",
+      appId: "1:596937236940:web:e30234dc965d41a002bd69",
+      measurementId: "G-97S2FEKL1W"
+      
+    };
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore();
+
+    // AUTH SETUP
+    const auth = getAuth();
+    const provider = new GoogleAuthProvider();
+
+    function updateAuthUi(user) {
+      const authLinks = document.querySelectorAll('a[onclick*="login"], a[onclick*="signup"]');
+      authLinks.forEach((link) => {
+        const original = (link.dataset.originalText || link.textContent || "").trim();
+        if (!link.dataset.originalText) {
+          link.dataset.originalText = original;
+        }
+
+        const isSignupLink = /sign\s*up/i.test(link.dataset.originalText);
+        if (user) {
+          if (isSignupLink) {
+            link.style.display = "none";
+          } else {
+            link.style.display = "";
+            link.textContent = "Log out";
+          }
+        } else {
+          link.style.display = "";
+          link.textContent = link.dataset.originalText;
+        }
+      });
+    }
+
+    window.logout = async function () {
+      try {
+        await signOut(auth);
+      } catch (error) {
+        console.error(error);
+        alert(error.message);
+      }
+    };
+
+    window.login = function () {
+      if (auth.currentUser) {
+        logout();
+        return;
+      }
+
+      signInWithPopup(auth, provider)
+        .then((result) => {
+          const user = result.user;
+
+          console.log("Name:", user.displayName);
+          console.log("Email:", user.email);
+          console.log(getLocation(user));
+
+          alert("Login working ✅");
+        })
+        .catch((error) => {
+          console.error(error);
+          alert(error.message);
+        });
+    };
+
+    window.signup = function () {
+      if (auth.currentUser) {
+        logout();
+        return;
+      }
+      login();
+    };
+
+    function getLocation(user) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const lat = position.coords.latitude;
+          const lng = position.coords.longitude;
+
+          console.log("Latitude:", lat);
+          console.log("Longitude:", lng);
+
+          detectCountry(user, lat, lng);
+        },
+        (error) => {
+          console.log("Location denied or error");
+
+          // still save user without location
+          saveUser(user, "Unknown");
+        }
+      );
+    }
+
+    function detectCountry(user, lat, lng) {
+      let country = "Global";
+
+      // simple India check (we improve later)
+      if (lat > 8 && lat < 37) {
+        country = "India";
+      }
+
+      console.log("Detected country:", country);
+
+      saveUser(user, country);
+    }
+
+    setPersistence(auth, browserLocalPersistence).catch((error) => {
+      console.error("Persistence setup failed:", error);
+    });
+
+    onAuthStateChanged(auth, (user) => {
+      updateAuthUi(user);
+      if (user) {
+        console.log("User already logged in:", user.displayName);
+      }
+    });
+
+    async function saveUser(user, country) {
+      await setDoc(doc(db, "users", user.uid), {
+        name: user.displayName,
+        email: user.email,
+        country: country
+      });
+
+      console.log("User saved");
+    }
+
+  </script>
+
+</body>
+
+</html>
+

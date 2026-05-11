@@ -1,0 +1,3007 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CareerCompass - Quiz</title>
+
+  <link rel="stylesheet" href="careeeeeeercom.css" id="Helllllllo">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body onload="hiiiiiiiiiiihdeihdid()">
+    <!-- Global orbs -->
+  <div class="global-bg">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Floating particles -->
+  <div class="particles">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <label class="theme-switch" title="Switch theme">
+          <input type="checkbox" onchange="window.location='quizdark.html'" aria-label="Switch theme">
+          <span class="theme-switch-slider"></span>
+        </label>
+        <a href="careercom.html">CareerCompass</a></div>
+      <div class="nav-links">
+        <a href="careercom.html">Home</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="ai.html">AI</a>
+        <a href="javascript:void(0)" class="login-btn" onclick="login()">Login</a>
+        <a href="javascript:void(0)" class="signup-btn" onclick="signup()">Sign Up</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- QUIZ HERO -->
+  <section class="hero story">
+    
+
+    <div class="container hero-content reveal">
+      <h1 class="hero-title">
+        <span>What's Your Current</span><br>
+        <span>Education Level?</span>
+      </h1>
+
+      <p class="hero-sub">
+        Tell us where you are in your academic journey, and we'll guide you to the right path.
+      </p>
+
+      <div class="quiz-options">
+        <button type="button" class="btn secondary" onclick="start10thFlow()">1-10th Grade</button>
+        <button type="button" class="btn secondary" onclick="start11thFlow()">11th Grade</button>
+        <button type="button" class="btn secondary" onclick="start12thFlow()">12th Grade</button>
+        <button type="button" class="btn secondary" onclick="startUGFlow()">Undergraduate (UG)</button>
+        <button type="button" class="btn secondary" onclick="startPGFlow()">Postgraduate (PG)</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS SECTIONS -->
+  <section class="section story result" id="result-10th" style="display: none;">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Streams for 1-10th Grade</h2>
+        <p>Based on your current level, here are the academic streams you can pursue after 10th grade</p>
+      </div>
+
+      <div class="card-grid">
+        <div class="card reveal">
+          <h3>🎓 Science Stream</h3>
+          <p>
+            Focuses on Physics, Chemistry, Mathematics, and Biology. Ideal for careers in engineering, medicine,
+            research, and technology.
+          </p>
+          <p class="muted">
+            Leads to fields like engineer, scientist, and (with Biology/PCB) doctor, and more.
+          </p>
+        </div>
+
+        <div class="card reveal">
+          <h3>💼 Commerce Stream</h3>
+          <p>
+            Covers Accountancy, Business Studies, Economics, and Mathematics. Perfect for business, finance, and
+            entrepreneurship.
+          </p>
+          <p class="muted">
+            Opens doors to CA, MBA, banking, and corporate careers.
+          </p>
+        </div>
+
+        <div class="card reveal">
+          <h3>🎨 Arts/Humanities Stream</h3>
+          <p>
+            Includes History, Geography, Political Science, Sociology, and languages. Great for creative and social
+            sciences careers.
+          </p>
+          <p class="muted">
+            Leads to journalism, law, teaching, and social work professions.
+          </p>
+        </div>
+      </div>
+
+      <div class="hero-buttons" style="text-align: center; margin-top: 50px;">
+        <button class="btn primary" onclick="resetQuiz()">Take Quiz Again</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt story result" id="result-11th" style="display: none;">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Pathways for 11th Grade</h2>
+        <p>Entrance exams and colleges you can target after 12th grade</p>
+      </div>
+
+      <div class="card-grid">
+        <div class="card reveal">
+          <h3>🏛️ Engineering Entrance Exams</h3>
+          <p>
+            JEE Main & Advanced for IITs, NITs, and other engineering colleges. Focus on Physics, Chemistry,
+            Mathematics.
+          </p>
+          <p class="muted">
+            Colleges: IIT Delhi, IIT Bombay, NIT Trichy, etc.
+          </p>
+        </div>
+
+        <div class="card reveal">
+          <h3>🏥 Medical Entrance Exams</h3>
+          <p>
+            NEET for MBBS, BDS. Requires Biology, Physics, Chemistry. Also AIIMS, JIPMER for specialized medical
+            courses.
+          </p>
+          <p class="muted">
+            Colleges: AIIMS Delhi, CMC Vellore, AFMC Pune, etc.
+          </p>
+        </div>
+
+        <div class="card reveal">
+          <h3>📊 Other Competitive Exams</h3>
+          <p>
+            CLAT for Law, NATA for Architecture, UPSC for Civil Services, CA Foundation for Chartered Accountancy.
+          </p>
+          <p class="muted">
+            Various prestigious institutions across India.
+          </p>
+        </div>
+      </div>
+
+      <div class="hero-buttons" style="text-align: center; margin-top: 50px;">
+        <button class="btn primary" onclick="resetQuiz()">Take Quiz Again</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section story result" id="result-12th" style="display: none;">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Pathways for 12th Grade</h2>
+        <p>Entrance exams and colleges you can target after 12th grade</p>
+      </div>
+
+      <div class="card-grid">
+        <div class="card reveal">
+          <h3>🏛️ Engineering Entrance Exams</h3>
+          <p>
+            JEE Main & Advanced for IITs, NITs, and other engineering colleges. Focus on Physics, Chemistry,
+            Mathematics.
+          </p>
+          <p class="muted">
+            Colleges: IIT Delhi, IIT Bombay, NIT Trichy, etc.
+          </p>
+        </div>
+
+        <div class="card reveal">
+          <h3>🏥 Medical Entrance Exams</h3>
+          <p>
+            NEET for MBBS, BDS. Requires Biology, Physics, Chemistry. Also AIIMS, JIPMER for specialized medical
+            courses.
+          </p>
+          <p class="muted">
+            Colleges: AIIMS Delhi, CMC Vellore, AFMC Pune, etc.
+          </p>
+        </div>
+
+        <div class="card reveal">
+          <h3>📊 Other Competitive Exams</h3>
+          <p>
+            CLAT for Law, NATA for Architecture, UPSC for Civil Services, CA Foundation for Chartered Accountancy.
+          </p>
+          <p class="muted">
+            Various prestigious institutions across India.
+          </p>
+        </div>
+      </div>
+
+      <div class="hero-buttons" style="text-align: center; margin-top: 50px;">
+        <button class="btn primary" onclick="resetQuiz()">Take Quiz Again</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt story result" id="result-ug" style="display: none;">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Career Options for Undergraduates</h2>
+        <p>Job opportunities and further studies after completing your bachelor's degree</p>
+      </div>
+
+      <div class="card-grid">
+        <div class="card reveal">
+          <h3>💻 Software Engineer/Developer</h3>
+          <p>
+            Work in tech companies, develop applications, websites, and software solutions.
+          </p>
+          <p class="muted">
+            Companies: Google, Microsoft, Amazon, startups. Average salary: ₹6-15 LPA
+          </p>
+        </div>
+
+        <div class="card reveal">
+          <h3>🏥 Doctor/Medical Professional</h3>
+          <p>
+            Practice medicine, specialize in various fields like surgery, pediatrics, cardiology.
+          </p>
+          <p class="muted">
+            Hospitals, clinics, research. Pursue MD/MS for specialization.
+          </p>
+        </div>
+
+        <div class="card reveal">
+          <h3>📈 Business Analyst/Manager</h3>
+          <p>
+            Analyze business data, manage operations, strategic planning in corporate sector.
+          </p>
+          <p class="muted">
+            MNCs, consulting firms. Consider MBA for advancement.
+          </p>
+        </div>
+      </div>
+
+      <div class="hero-buttons" style="text-align: center; margin-top: 50px;">
+        <button class="btn primary" onclick="resetQuiz()">Take Quiz Again</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section story result" id="result-pg" style="display: none;">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Career Options for Postgraduates</h2>
+        <p>Advanced roles and pathways after completing your postgraduate degree</p>
+      </div>
+
+      <div class="card-grid">
+        <div class="card reveal">
+          <h3>Leadership and Management Roles</h3>
+          <p>
+            Move into decision-making roles across operations, strategy, consulting, and domain leadership.
+          </p>
+          <p class="muted">
+            Typical tracks: Product leadership, management consulting, corporate strategy.
+          </p>
+        </div>
+
+        <div class="card reveal">
+          <h3>Research and Academic Careers</h3>
+          <p>
+            Build a research profile, publish work, and pursue PhD, teaching, or specialist knowledge careers.
+          </p>
+          <p class="muted">
+            Typical tracks: Research scientist, assistant professor, policy researcher.
+          </p>
+        </div>
+
+        <div class="card reveal">
+          <h3>High-Skill Industry Specialization</h3>
+          <p>
+            Use your specialization to target advanced technical, analytical, and expert-level roles.
+          </p>
+          <p class="muted">
+            Typical tracks: AI specialist, finance expert, domain consultant, senior analyst.
+          </p>
+        </div>
+      </div>
+
+      <div class="hero-buttons" style="text-align: center; margin-top: 50px;">
+        <button class="btn primary" onclick="resetQuiz()">Take Quiz Again</button>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-bg"></div>
+
+    <div class="container footer-content">
+      <h3>CareerCompass</h3>
+      <p>Helping students find clarity, direction, and confidence.</p>
+
+      <div class="footer-links">
+        <a href="careercom.html">Home</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="ai.html">AI</a>
+        <a href="javascript:void(0)" onclick="login()">Login</a>
+        <a href="javascript:void(0)" onclick="signup()">Sign Up</a>
+      </div>
+
+      <p class="copy">© 2026 CareerCompass</p>
+    </div>
+</footer>
+  <script>
+    // Quiz functionality
+    document.addEventListener('DOMContentLoaded', function () {
+      const optionButtons = document.querySelectorAll('.option-btn');
+      const results = document.querySelectorAll('.result');
+
+      optionButtons.forEach(button => {
+        button.addEventListener('click', function () {
+          const level = this.getAttribute('data-level');
+
+          if (level === "10th") {
+            start10thFlow();   // 👉 THIS WAS MISSING
+          } else {
+            showResult(level);
+          }
+        });
+      });
+    });
+
+    function showResult(level) {
+      // Hide all results
+      document.querySelectorAll('.result').forEach(result => {
+        result.style.display = 'none';
+      });
+
+      // Show selected result
+      const selectedResult = document.getElementById('result-' + level);
+      if (selectedResult) {
+        selectedResult.style.display = 'block';
+        selectedResult.scrollIntoView({ behavior: 'smooth' });
+        saveQuizResultToBackend({
+          level: level || "general",
+          resultTitle: `Standard ${level || "general"} result`,
+          resultSummary: (selectedResult.textContent || "").trim().slice(0, 600)
+        });
+      }
+    }
+
+    const QUIZ_API_BASE_URL = (() => {
+      const { protocol, hostname, origin } = window.location;
+      const isLocalhost = hostname === "localhost" || hostname === "127.0.0.1";
+
+      if (protocol === "file:" || isLocalhost) {
+        return "http://localhost:3000";
+      }
+
+      return origin;
+    })();
+
+    async function saveQuizResultToBackend(payload) {
+      try {
+        if (typeof window.getFirebaseIdToken !== "function") return;
+        const postQuizResult = async (forceRefresh = false) => {
+          const idToken = await window.getFirebaseIdToken(forceRefresh);
+          return fetch(`${QUIZ_API_BASE_URL}/api/save-quiz`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${idToken}`
+            },
+            body: JSON.stringify(payload)
+          });
+        };
+
+        let response = await postQuizResult(false);
+        if (response.status === 401) {
+          const firstError = await response.json().catch(() => ({}));
+          if ((firstError?.code || "").startsWith("auth/")) {
+            response = await postQuizResult(true);
+          }
+        }
+
+        if (!response.ok) {
+          const errorPayload = await response.json().catch(() => ({}));
+          throw new Error(errorPayload?.error || "Failed to save quiz result.");
+        }
+      } catch (error) {
+        console.error("Could not save quiz result to backend:", error);
+      }
+    }
+
+
+    function resetQuiz() {
+      // Hide all results
+      document.querySelectorAll('.result').forEach(result => {
+        result.style.display = 'none';
+      });
+
+      // Scroll back to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Existing animations and effects
+    const reveals = document.querySelectorAll('.reveal');
+
+    function revealOnScroll() {
+      reveals.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 80) {
+          el.classList.add('show');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+
+    /* NAVBAR SCROLL EFFECT */
+    const nav = document.querySelector('.nav');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+
+    /* MAGNETIC BUTTON EFFECT */
+    const buttons = document.querySelectorAll('.btn');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('mousemove', e => {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        btn.style.transform = `translate(${(x - rect.width / 2) / 8}px, ${(y - rect.height / 2) / 8}px)`;
+      });
+
+      btn.addEventListener('mouseleave', () => {
+        btn.style.transform = 'translate(0,0)';
+      });
+    });
+  </script>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+
+      /* HERO BACKGROUND MOVE */
+      const heroBg = document.querySelector('.hero-bg');
+      if (heroBg) {
+        heroBg.style.transform = `translateY(${scrollY * 0.3}px)`;
+      }
+
+      /* PARALLAX CARDS */
+      document.querySelectorAll('.card').forEach((card, i) => {
+        card.style.transform = `translateY(${scrollY * (0.02 * (i + 1))}px)`;
+      });
+    });
+  </script>
+
+  <script>
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        card.style.setProperty('--x', x + 'px');
+        card.style.setProperty('--y', y + 'px');
+      });
+    });
+  </script>
+
+  <script>
+    const sections = document.querySelectorAll('.story');
+
+    function handleScroll() {
+      sections.forEach(sec => {
+        const rect = sec.getBoundingClientRect();
+
+        if (rect.top < window.innerHeight - 120) {
+          sec.classList.add('show');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('load', handleScroll);
+  </script>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const scroll = window.scrollY;
+      document.querySelectorAll('.bg-blobs span').forEach((blob, i) => {
+        blob.style.transform = `translateY(${scroll * (0.05 * (i + 1))}px)`;
+      });
+    });
+  </script>
+
+  <script>
+    const cta = document.querySelector('.cta');
+
+    if (cta) {
+      cta.addEventListener('mousemove', e => {
+        const rect = cta.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        cta.style.setProperty('--x', x + 'px');
+        cta.style.setProperty('--y', y + 'px');
+      });
+    }
+  </script>
+
+  <div class="cursor-glow"></div>
+
+  <script>
+    const glow = document.querySelector('.cursor-glow');
+
+    window.addEventListener('mousemove', e => {
+      glow.style.left = e.clientX + 'px';
+      glow.style.top = e.clientY + 'px';
+    });
+  </script>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, setPersistence, browserLocalPersistence }
+      from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+    // 🔴 COPY SAME CONFIG FROM YOUR MAIN PAGE
+    const firebaseConfig = {
+      apiKey: "YOUR_FIREBASE_WEB_API_KEY",
+      authDomain: "rcompass2.firebaseapp.com",
+      projectId: "rcompass2",
+      storageBucket: "rcompass2.firebasestorage.app",
+      messagingSenderId: "596937236940",
+      appId: "1:596937236940:web:e30234dc965d41a002bd69",
+      measurementId: "G-97S2FEKL1W"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth();
+    const provider = new GoogleAuthProvider();
+
+    window.getFirebaseIdToken = async function(forceRefresh = false) {
+      const user = auth.currentUser;
+      if (!user) {
+        throw new Error("Please login to continue.");
+      }
+      return user.getIdToken(Boolean(forceRefresh));
+    };
+
+    function updateAuthUi(user) {
+      const authLinks = document.querySelectorAll('a[onclick*="login"], a[onclick*="signup"]');
+      authLinks.forEach((link) => {
+        const original = (link.dataset.originalText || link.textContent || "").trim();
+        if (!link.dataset.originalText) {
+          link.dataset.originalText = original;
+        }
+
+        const isSignupLink = /sign\s*up/i.test(link.dataset.originalText);
+        if (user) {
+          if (isSignupLink) {
+            link.style.display = "none";
+          } else {
+            link.style.display = "";
+            link.textContent = "Log out";
+          }
+        } else {
+          link.style.display = "";
+          link.textContent = link.dataset.originalText;
+        }
+      });
+    }
+
+    window.logout = async function () {
+      try {
+        await signOut(auth);
+      } catch (error) {
+        console.error(error);
+        alert(error.message);
+      }
+    };
+
+    window.login = function () {
+      if (auth.currentUser) {
+        logout();
+        return;
+      }
+
+      signInWithPopup(auth, provider)
+        .then((result) => {
+          const user = result.user;
+          alert("Login working ✅");
+        })
+        .catch((error) => {
+          console.error(error);
+          alert(error.message);
+        });
+    };
+
+    window.signup = function () {
+      if (auth.currentUser) {
+        logout();
+        return;
+      }
+      login();
+    };
+
+    setPersistence(auth, browserLocalPersistence).catch((error) => {
+      console.error("Persistence setup failed:", error);
+    });
+
+    onAuthStateChanged(auth, (user) => {
+      updateAuthUi(user);
+      if (user) {
+        console.log("User already logged in:", user.displayName);
+      }
+    });
+
+  </script>
+
+  <script>
+    // SIMPLE QUIZ SYSTEM (starter)
+    let currentQuestion = 0;
+
+    const questions = [
+      {
+        question: "What are you most interested in?",
+        options: ["Technology", "Business", "Creative fields"]
+      },
+      {
+        question: "Which subject do you enjoy more?",
+        options: ["Math", "Economics", "Art"]
+      }
+    ];
+
+    function startQuiz() {
+      showQuestion();
+
+    }
+
+    function showQuestion() {
+      const q = questions[currentQuestion];
+
+      const container = document.querySelector('.hero-content');
+      container.innerHTML = `
+    <h1 id="quiz-title" class="hero-title">CareerCompass Quiz</h1>
+    <p class="hero-sub">${q.question}</p>
+    <div class="quiz-options">
+      ${q.options.map(opt => `<button class="btn secondary" onclick="nextQuestion()">${opt}</button>`).join("")}
+    </div>
+  `;
+    }
+
+    window.nextQuestion = function () {
+      currentQuestion++;
+
+      if (currentQuestion < questions.length) {
+        showQuestion();
+      } else {
+        showFinalResult();
+      }
+    };
+
+    function start10thFlow() {
+      document.querySelector('.hero-content').innerHTML = `
+    <h1 class="hero-title">Which Board Are You Studying In?</h1>
+    <div class="quiz-options" style="flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 2rem;">
+      <button class="btn secondary" onclick="selectBoard('CBSE')">CBSE</button>
+      <button class="btn secondary" onclick="selectBoard('State')">State Board</button>
+      <button class="btn secondary" onclick="selectBoard('CISCE')">CISCE</button>
+      <button class="btn secondary" onclick="selectBoard('NIOS')">NIOS</button>
+      <button class="btn secondary" onclick="selectBoard('IB')">IB</button>
+      <button class="btn secondary" onclick="selectBoard('Cambridge')">Cambridge</button>
+    </div>
+  `;
+    }
+
+    function selectBoard(board) {
+      if (board === "CBSE" || board === "CISCE" || board === "State") {
+        askSubjects(board);
+      }
+
+      else if (board === "Cambridge") {
+        askCambridgeLevel();
+      }
+
+      else if (board === "NIOS" || board === "IB") {
+        askMultiSubjects(board);
+      }
+    }
+
+    function render10thBlueprint(board, stream, strategy, focusList, paths, exams, actions, advice) {
+      document.querySelector('.hero-content').innerHTML = `
+    <h2 class="hero-title" style="font-size: 2.5rem; margin-bottom: 1rem;">Your Personalized 10th Grade Blueprint</h2>
+    <div style="text-align: left; background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); max-width: 800px; margin: 0 auto; line-height: 1.6;">
+      <h3 style="color: #64ffda; font-size: 1.5rem; margin-top: 0;">Board Strategy (${board})</h3>
+      <div style="background: rgba(100, 255, 218, 0.1); border-left: 4px solid #64ffda; padding: 1.5rem; border-radius: 4px; margin-bottom: 2rem; font-size: 1.1rem;">${strategy}</div>
+      <h3 style="color: #64ffda; font-size: 1.5rem;">1. Stream Direction Match</h3>
+      <p style="font-size: 1.1rem; color: rgba(255,255,255,0.9);"><b>Best-fit stream:</b> ${stream}</p>
+      <h3 style="color: #64ffda; font-size: 1.5rem;">2. Focus Areas</h3>
+      <ul style="padding-left: 1.5rem; font-size: 1.1rem; color: rgba(255,255,255,0.9);">${focusList.map(x => `<li style="margin-bottom: 0.5rem;">${x}</li>`).join('')}</ul>
+      <h3 style="color: #64ffda; font-size: 1.5rem;">3. Suggested Career Pathways</h3>
+      <ul style="padding-left: 1.5rem; font-size: 1.1rem; color: rgba(255,255,255,0.9);">${paths.map(x => `<li style="margin-bottom: 0.5rem;">${x}</li>`).join('')}</ul>
+      <h3 style="color: #64ffda; font-size: 1.5rem;">4. Key Exams to Track</h3>
+      <ul style="padding-left: 1.5rem; font-size: 1.1rem; color: rgba(255,255,255,0.9);">${exams.map(x => `<li style="margin-bottom: 0.5rem;">${x}</li>`).join('')}</ul>
+      <h3 style="color: #64ffda; font-size: 1.5rem;">5. Action Plan</h3>
+      <ul style="padding-left: 1.5rem; font-size: 1.1rem; color: rgba(255,255,255,0.9);">${actions.map(x => `<li style="margin-bottom: 0.5rem;">${x}</li>`).join('')}</ul>
+      <div style="background: rgba(255, 193, 7, 0.1); border-left: 4px solid #ffc107; padding: 1.5rem; border-radius: 4px; margin-top: 2rem; font-size: 1.1rem;">${advice}</div>
+    </div>
+    <div class="hero-buttons" style="margin-top: 2.5rem;"><button class="btn primary" onclick="location.reload()">Start Again</button></div>
+  `;
+      document.querySelector('.hero-content').scrollIntoView({ behavior: 'smooth' });
+      saveQuizResultToBackend({
+        level: "10th",
+        resultTitle: `${board} - ${stream}`,
+        resultSummary: strategy,
+        answers: {
+          board,
+          stream
+        }
+      });
+    }
+
+
+    function askCambridgeLevel() {
+      document.querySelector('.hero-content').innerHTML = `
+    <h2 class="hero-title" style="font-size: 2.5rem;">Select your level</h2>
+    <div class="quiz-options" style="margin-top: 2rem;">
+      <button class="btn secondary" onclick="cambridgeFlow('9-10')">Class 9/10</button>
+      <button class="btn secondary" onclick="cambridgeFlow('below')">Below 9</button>
+    </div>
+  `;
+    }
+
+    function cambridgeFlow(level) {
+      if (level === "9-10") {
+        document.querySelector('.hero-content').innerHTML = `
+      <h2 class="hero-title" style="font-size: 2.5rem;">Which stream are you interested in?</h2>
+      <div class="quiz-options" style="margin-top: 2rem;">
+        <button class="btn secondary" onclick="cambridgeAdvice('Science')">Science</button>
+        <button class="btn secondary" onclick="cambridgeAdvice('Commerce')">Commerce</button>
+        <button class="btn secondary" onclick="cambridgeAdvice('Arts')">Arts</button>
+      </div>
+    `;
+      } else {
+        askSubjects("Cambridge");
+      }
+    }
+
+    function cambridgeAdvice(stream) {
+      const map = {
+        Science: { focus: ["Math and science fundamentals", "Daily problem practice", "Consistent coursework"], paths: ["Engineering", "Medical", "Research"] },
+        Commerce: { focus: ["Accounting basics", "Economics understanding", "Communication skills"], paths: ["Finance", "Management", "Business"] },
+        Arts: { focus: ["Writing skills", "Concept clarity", "Current awareness"], paths: ["Law", "Media", "Social sciences"] }
+      };
+      const selected = map[stream] || map.Arts;
+      render10thBlueprint(
+        "Cambridge",
+        stream,
+        "Build depth with steady performance and profile building.",
+        selected.focus,
+        selected.paths,
+        ["CUET", "CLAT/JEE/NEET by stream", "Olympiads"],
+        ["Now: build fundamentals", "Next: align stream and subjects", "Later: prep for target entrance"],
+        "<b>Smart suggestion:</b> Keep one primary goal and one backup option."
+      );
+    }
+
+    function askMultiSubjects(board) {
+      document.querySelector('.hero-content').innerHTML = `
+    <h2 class="hero-title" style="font-size: 2.5rem;">Select your strongest area</h2>
+    <div class="quiz-options" style="margin-top: 2rem;">
+      <button class="btn secondary" onclick="multiResult('${board}','Tech')">Technology</button>
+      <button class="btn secondary" onclick="multiResult('${board}','Business')">Business</button>
+      <button class="btn secondary" onclick="multiResult('${board}','Creative')">Creative</button>
+    </div>
+  `;
+    }
+
+    function multiResult(board, type) {
+      const map = {
+        Tech: { stream: "Science / Technology", focus: ["Math and science", "Logic practice", "Beginner coding"], paths: ["Engineering", "Computer science", "Applied science"] },
+        Business: { stream: "Commerce / Management", focus: ["Arithmetic", "Business awareness", "Communication"], paths: ["Finance", "Accounting", "Management"] },
+        Creative: { stream: "Arts / Humanities", focus: ["Writing", "Research", "Critical thinking"], paths: ["Media", "Design", "Law"] }
+      };
+      const selected = map[type] || map.Creative;
+      render10thBlueprint(
+        board,
+        selected.stream,
+        "Use your board syllabus to strengthen basics early.",
+        selected.focus,
+        selected.paths,
+        ["Olympiads", "Scholarship tests", "Future stream entrance exams"],
+        ["3 months: improve weak areas", "1 year: build stream-aligned habits", "After 10th: choose stream from strengths"],
+        "<b>Smart suggestion:</b> Interest plus discipline gives the best result."
+      );
+    }
+
+    function askSubjects(board) {
+      document.querySelector('.hero-content').innerHTML = `
+    <h2 class="hero-title" style="font-size: 2.5rem;">Which subjects are you strongest in?</h2>
+    <p class="hero-sub">Select the area you feel most confident in</p>
+
+    <div class="quiz-options" style="margin-top: 2rem;">
+      <button class="btn secondary" onclick="showStreamModern('${board}','Science')">Maths & Science</button>
+      <button class="btn secondary" onclick="showStreamModern('${board}','Commerce')">Business & Economics</button>
+      <button class="btn secondary" onclick="showStreamModern('${board}','Arts')">Languages & Social Studies</button>
+    </div>
+  `;
+    }
+
+    function showStreamModern(board, stream) {
+      if (stream === "Science") {
+        render10thBlueprint(
+          board,
+          "Science",
+          "Prioritize concepts and practice consistency.",
+          ["Physics-Chemistry-Math basics", "Numerical practice", "Accuracy and speed"],
+          ["Engineering", "Medical", "Research"],
+          ["JEE", "NEET", "Olympiads"],
+          ["9th-10th: fundamentals", "11th-12th: structured prep", "After boards: focused execution"],
+          "<b>Smart suggestion:</b> Strong basics now reduce pressure later."
+        );
+      } else if (stream === "Commerce") {
+        render10thBlueprint(
+          board,
+          "Commerce",
+          "Build concept-first understanding in accounts and economics.",
+          ["Accounting basics", "Economics clarity", "Presentation skills"],
+          ["CA/CS/CMA", "Finance", "Business management"],
+          ["CA Foundation", "CUET", "BBA entrances"],
+          ["9th-10th: arithmetic and logic", "11th-12th: subject depth", "After boards: college targeting"],
+          "<b>Smart suggestion:</b> Consistency in basics matters more than rote learning."
+        );
+      } else {
+        render10thBlueprint(
+          board,
+          "Arts/Humanities",
+          "Develop writing, analysis, and awareness strongly.",
+          ["Writing clarity", "Concept understanding", "General awareness"],
+          ["Law", "Media", "Social sciences"],
+          ["CLAT", "CUET", "Design/media entrances"],
+          ["9th-10th: writing and reading habit", "11th-12th: subject alignment", "After boards: profile and communication"],
+          "<b>Smart suggestion:</b> Strong communication can become your biggest advantage."
+        );
+      }
+    }
+
+    function showStream(board, stream) {
+      let msg = "";
+
+      if (stream === "Science") {
+        msg = `You can choose the Science stream.<br><br>👉 Focus on:<br>- Strong basics in Maths & Science<br>- Practicing problems daily<br>- Scoring high in board exams<br><br>🎯 Aim for:<br>- 85%+ for top schools<br>- 90%+ for competitive advantage`;
+      }
+
+      else if (stream === "Commerce") {
+        msg = `You can choose the Commerce stream.<br><br>👉 Focus on:<br>- Understanding concepts (not memorizing)<br>- Basics of accounts & economics<br>- Improving calculation speed<br><br>🎯 Aim for:<br>- 75%–85% for good colleges`;
+      }
+
+      else {
+        msg = `You can choose the Arts/Humanities stream.<br><br>👉 Focus on:<br>- Writing skills<br>- Understanding concepts clearly<br>- General awareness<br><br>🎯 Aim for:<br>- 70%+ with strong subject knowledge`;
+      }
+
+      document.querySelector('.hero-content').innerHTML = `
+    <h2 class="hero-title" style="font-size: 2.5rem;">${board} Recommendation</h2>
+    <p class="hero-sub" style="text-align: left; max-width: 600px; margin: 0 auto; line-height: 1.6;">${msg}</p>
+    <div class="hero-buttons" style="margin-top: 2rem;">
+      <button class="btn primary" onclick="location.reload()">Start Again</button>
+    </div>
+  `;
+    }
+
+    function showFinalResult() {
+      render10thBlueprint(
+        "General",
+        "Exploration Mode",
+        "Start from strengths before final stream selection.",
+        ["Identify strong and weak subjects", "Set a daily study routine", "Take mentor feedback"],
+        ["Science exploration", "Commerce exploration", "Humanities exploration"],
+        ["Aptitude tests", "Scholarship exams", "Stream-specific exam awareness"],
+        ["This month: improve consistency", "This year: strengthen basics", "After 10th: choose stream confidently"],
+        "<b>Smart suggestion:</b> Explore first, then commit with clarity."
+      );
+    }
+
+    // --- 11TH GRADE FLOW ---
+    const UNIFIED_SUBJECTS = [
+      "Mathematics", "Physics", "Chemistry", "Biology",
+      "Accountancy", "Business Studies", "Economics",
+      "Computer Science", "Psychology",
+      "History", "Geography", "Political Science",
+      "English", "Design", "Art"
+    ];
+
+    const SUBJECT_WEIGHTS = {
+      "mathematics": { tech: 3, business: 1 },
+      "physics": { tech: 3, medical: 1 },
+      "chemistry": { tech: 1, medical: 3 },
+      "biology": { medical: 3 },
+      "accountancy": { business: 3 },
+      "business studies": { business: 3 },
+      "economics": { business: 2, humanities: 1 },
+      "computer science": { tech: 3 },
+      "psychology": { humanities: 2, medical: 1 },
+      "history": { humanities: 3 },
+      "geography": { humanities: 2 },
+      "political science": { humanities: 3 },
+      "english": { humanities: 1, creative: 1 },
+      "design": { creative: 3 },
+      "art": { creative: 3 }
+    };
+
+    function hasBiologySubject(subjects) {
+      return Array.isArray(subjects) && subjects.some(sub => sub.toLowerCase().includes("biology"));
+    }
+
+    function boostScoresFromCareerGoal(scores, careerGoal) {
+      const goal = String(careerGoal || "").toLowerCase();
+      if (!goal || goal === "no, i want suggestions") return;
+      if (goal.includes("engineer") || goal.includes("tech")) scores.tech += 1;
+      if (goal.includes("doctor") || goal.includes("medic")) scores.medical += 1;
+    }
+
+    function getTopClusterKeys(scores, fallbackKeys) {
+      const ranked = Object.entries(scores).sort((a, b) => b[1] - a[1]).map(([key]) => key);
+      fallbackKeys.forEach((key) => {
+        if (!ranked.includes(key)) ranked.push(key);
+      });
+      return ranked.slice(0, 3);
+    }
+    let data11th = {
+      board: "",
+      stream: "",
+      subjects: [],
+      hlSubjects: [],
+      niosReason: "",
+      interest: "",
+      careerMind: "",
+      studyTime: "",
+      competitiveExams: "",
+      preference: "",
+      careerScores: { tech: 0, medical: 0, business: 0, humanities: 0, creative: 0 }
+    };
+
+    function start11thFlow() {
+      // Reset data
+      data11th = { board: "", stream: "", subjects: [], hlSubjects: [], niosReason: "", interest: "", careerMind: "", studyTime: "", competitiveExams: "", preference: "", careerScores: { tech: 0, medical: 0, business: 0, humanities: 0, creative: 0 } };
+
+      document.querySelector('.hero-content').innerHTML = `
+    <div style="margin-bottom: 2rem; width: 100%; background: rgba(255,255,255,0.1); border-radius: 10px; height: 8px; overflow: hidden;">
+      <div style="width: 15%; height: 100%; background: #64ffda; transition: width 0.3s ease;"></div>
+    </div>
+    <h2 class="hero-title" style="font-size: 2.5rem; animation: fadeUp 0.5s ease forwards;">SECTION 1: Educational Board</h2>
+    <p class="hero-sub" style="animation: fadeUp 0.6s ease forwards;">Which board are you studying under?</p>
+    <div class="quiz-options" style="flex-direction: column; gap: 1rem; align-items: center; margin-top: 2rem; animation: fadeUp 0.7s ease forwards;">
+      <button class="btn secondary" style="width: 300px" onclick="set11thBoard('CBSE')">CBSE</button>
+      <button class="btn secondary" style="width: 300px" onclick="set11thBoard('CISCE')">CISCE</button>
+      <button class="btn secondary" style="width: 300px" onclick="set11thBoard('State Board')">State Board</button>
+      <button class="btn secondary" style="width: 300px" onclick="set11thBoard('NIOS')">NIOS</button>
+      <button class="btn secondary" style="width: 300px" onclick="set11thBoard('IB')">IB (International Baccalaureate)</button>
+      <button class="btn secondary" style="width: 300px" onclick="set11thBoard('Cambridge')">Cambridge (IGCSE / A Levels)</button>
+    </div>
+  `;
+    }
+
+    function set11thBoard(board) {
+      data11th.board = board;
+      if (board === "NIOS") {
+        ask11thNIOSReason();
+      } else {
+        ask11thUnifiedSubjects();
+      }
+    }
+
+    function ask11thNIOSReason() {
+      document.querySelector('.hero-content').innerHTML = `
+    <div style="margin-bottom: 2rem; width: 100%; background: rgba(255,255,255,0.1); border-radius: 10px; height: 8px; overflow: hidden;">
+      <div style="width: 25%; height: 100%; background: #64ffda; transition: width 0.3s ease;"></div>
+    </div>
+    <h2 class="hero-title" style="font-size: 2.5rem; animation: fadeUp 0.5s ease forwards;">SECTION 1.5: NIOS Path</h2>
+    <p class="hero-sub" style="animation: fadeUp 0.6s ease forwards;">Why did you choose NIOS?</p>
+    <div class="quiz-options" style="flex-direction: column; gap: 1rem; align-items: center; margin-top: 2rem; animation: fadeUp 0.7s ease forwards;">
+      <button class="btn secondary" style="width: 350px" onclick="set11thNIOSReason('Flexibility for skills')">Flexibility for skills/interests</button>
+      <button class="btn secondary" style="width: 350px" onclick="set11thNIOSReason('Competitive exam focus')">Competitive exam focus</button>
+      <button class="btn secondary" style="width: 350px" onclick="set11thNIOSReason('Personal reasons')">Personal reasons</button>
+    </div>
+  `;
+    }
+
+    function set11thNIOSReason(reason) {
+      data11th.niosReason = reason;
+      ask11thUnifiedSubjects();
+    }
+
+    function ask11thUnifiedSubjects() {
+      let subjectsHtml = UNIFIED_SUBJECTS.map(sub => `
+    <button class="btn secondary subj-btn" onclick="toggle11thUnifiedSubject(this, '${sub}')" style="margin: 0.5rem">${sub}</button>
+  `).join('');
+
+      let hint = "Select your subjects.";
+      let presetsHtml = "";
+
+      if (["CBSE", "CISCE", "State Board"].includes(data11th.board)) {
+        hint = "Select 4–6 subjects based on your combination.";
+        presetsHtml = `
+          <div style="margin-bottom: 1.5rem; display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap;">
+             <span style="color: rgba(255,255,255,0.6); align-self: center; margin-right: 0.5rem;">Quick Select:</span>
+             <button class="btn secondary preset-btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="applyPreset(['Mathematics', 'Physics', 'Chemistry', 'English'])">Science (PCM)</button>
+             <button class="btn secondary preset-btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="applyPreset(['Biology', 'Physics', 'Chemistry', 'English'])">Science (PCB)</button>
+             <button class="btn secondary preset-btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="applyPreset(['Accountancy', 'Business Studies', 'Economics', 'English'])">Commerce</button>
+             <button class="btn secondary preset-btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="applyPreset(['History', 'Geography', 'Political Science', 'English'])">Arts</button>
+          </div>
+        `;
+      } else if (data11th.board === "IB") {
+        hint = "Select 5–7 subjects for your IB Diploma.";
+      } else if (data11th.board === "Cambridge") {
+        hint = "Select 3–5 subjects for your A-Levels.";
+      } else {
+        hint = "Select your core subjects.";
+      }
+
+      document.querySelector('.hero-content').innerHTML = `
+    <div style="margin-bottom: 2rem; width: 100%; background: rgba(255,255,255,0.1); border-radius: 10px; height: 8px; overflow: hidden;">
+      <div style="width: 30%; height: 100%; background: #64ffda; transition: width 0.3s ease;"></div>
+    </div>
+    <h2 class="hero-title" style="font-size: 2.5rem; animation: fadeUp 0.5s ease forwards;">SECTION 2: Subject Selection</h2>
+    <p class="hero-sub" style="animation: fadeUp 0.6s ease forwards;">${hint}</p>
+    
+    <div class="quiz-options" style="flex-direction: column; align-items: center; max-width: 800px; margin: 2rem auto; animation: fadeUp 0.7s ease forwards;">
+      ${presetsHtml}
+      <div id="subject-container" style="display: flex; flex-wrap: wrap; justify-content: center;">
+        ${subjectsHtml}
+      </div>
+      <div style="width: 100%; margin-top: 1.5rem; display: flex; justify-content: center; gap: 0.5rem">
+        <input type="text" id="other-subject" placeholder="Custom subject..." style="padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); width: 200px; background: rgba(255,255,255,0.05); color: white;">
+        <button class="btn secondary" onclick="addOther11thUnifiedSubject()">Add</button>
+      </div>
+    </div>
+    <div class="hero-buttons" style="margin-top: 2rem; animation: fadeUp 0.8s ease forwards;">
+      <button class="btn primary" onclick="submit11thUnifiedSubjects()">Next Step ➔</button>
+    </div>
+  `;
+    }
+
+    function toggle11thUnifiedSubject(btn, subject) {
+      btn.classList.toggle('primary');
+      btn.classList.toggle('secondary');
+
+      if (data11th.subjects.includes(subject)) {
+        data11th.subjects = data11th.subjects.filter(s => s !== subject);
+      } else {
+        data11th.subjects.push(subject);
+      }
+    }
+
+    function applyPreset(presetSubjects) {
+      data11th.subjects = [];
+      const btns = document.querySelectorAll('.subj-btn');
+      btns.forEach(btn => {
+         btn.classList.remove('primary');
+         btn.classList.add('secondary');
+         let text = btn.innerText;
+         if (presetSubjects.includes(text)) {
+            btn.classList.remove('secondary');
+            btn.classList.add('primary');
+            data11th.subjects.push(text);
+         }
+      });
+    }
+
+    function addOther11thUnifiedSubject() {
+      const input = document.getElementById('other-subject');
+      const val = input.value.trim();
+      if (val && !data11th.subjects.includes(val)) {
+        data11th.subjects.push(val);
+        const btn = document.createElement('button');
+        btn.className = 'btn primary subj-btn';
+        btn.style.margin = '0.5rem';
+        btn.innerText = val;
+        btn.onclick = () => toggle11thUnifiedSubject(btn, val);
+
+        document.getElementById('subject-container').appendChild(btn);
+        input.value = '';
+      }
+    }
+
+    function validateSubjectsByBoard() {
+      const b = data11th.board;
+      const len = data11th.subjects.length;
+      if (b === "IB" && (len < 5 || len > 7)) {
+         alert("IB students usually take 6 subjects. Please select 5-7 subjects.");
+         return false;
+      }
+      if (b === "Cambridge" && (len < 3 || len > 5)) {
+         alert("A-Level students usually take 3-5 subjects.");
+         return false;
+      }
+      if (["CBSE", "CISCE", "State Board"].includes(b) && (len < 4 || len > 6)) {
+         alert("Please select 4-6 subjects based on your stream combination.");
+         return false;
+      }
+      if (len === 0) {
+         alert("Please select at least one subject.");
+         return false;
+      }
+      return true;
+    }
+
+    function submit11thUnifiedSubjects() {
+      const input = document.getElementById('other-subject');
+      if (input && input.value.trim() && !data11th.subjects.includes(input.value.trim())) {
+        data11th.subjects.push(input.value.trim());
+      }
+      
+      if (!validateSubjectsByBoard()) return;
+
+      if (data11th.board === "IB") {
+        ask11thUnifiedIBHL();
+      } else {
+        ask11thInterest();
+      }
+    }
+
+    function ask11thUnifiedIBHL() {
+      let html = data11th.subjects.map(sub => `
+    <button class="btn secondary subj-btn" onclick="toggle11thUnifiedHL(this, '${sub}')" style="margin: 0.5rem">${sub}</button>
+  `).join('');
+
+      document.querySelector('.hero-content').innerHTML = `
+    <div style="margin-bottom: 2rem; width: 100%; background: rgba(255,255,255,0.1); border-radius: 10px; height: 8px; overflow: hidden;">
+      <div style="width: 45%; height: 100%; background: #64ffda; transition: width 0.3s ease;"></div>
+    </div>
+    <h2 class="hero-title" style="font-size: 2.5rem; animation: fadeUp 0.5s ease forwards;">SECTION 2.5: Higher Level (HL) Subjects</h2>
+    <p class="hero-sub" style="animation: fadeUp 0.6s ease forwards;">(Multi-select) Which of your selected subjects are Higher Level (HL)?</p>
+    <div class="quiz-options" style="flex-wrap: wrap; justify-content: center; max-width: 800px; margin: 2rem auto; animation: fadeUp 0.7s ease forwards;">
+      ${html}
+    </div>
+    <div class="hero-buttons" style="margin-top: 2rem; animation: fadeUp 0.8s ease forwards;">
+      <button class="btn primary" onclick="submit11thUnifiedIB()">Next Step ➔</button>
+    </div>
+  `;
+    }
+
+    function toggle11thUnifiedHL(btn, subject) {
+      btn.classList.toggle('primary');
+      btn.classList.toggle('secondary');
+      if (data11th.hlSubjects.includes(subject)) {
+        data11th.hlSubjects = data11th.hlSubjects.filter(s => s !== subject);
+      } else {
+        data11th.hlSubjects.push(subject);
+      }
+    }
+
+    function submit11thUnifiedIB() {
+      if(data11th.hlSubjects.length > 4) {
+         return alert("IB students usually take a maximum of 3-4 HL subjects.");
+      }
+      ask11thInterest();
+    }
+
+
+
+    function ask11thInterest() {
+      const interests = [
+        "Problem-solving / logical thinking",
+        "Creative work (design, writing, media)",
+        "Helping people (doctor, social work)",
+        "Business / money / management",
+        "Technology / coding / AI",
+        "Government / civil services",
+        "Research / academics"
+      ];
+
+      document.querySelector('.hero-content').innerHTML = `
+    <div style="margin-bottom: 2rem; width: 100%; background: rgba(255,255,255,0.1); border-radius: 10px; height: 8px; overflow: hidden;">
+      <div style="width: 60%; height: 100%; background: #64ffda; transition: width 0.3s ease;"></div>
+    </div>
+    <h2 class="hero-title" style="font-size: 2.5rem; animation: fadeUp 0.5s ease forwards;">SECTION 3: Interest Type</h2>
+    <p class="hero-sub" style="animation: fadeUp 0.6s ease forwards;">What type of work interests you the most?</p>
+    <div class="quiz-options" style="flex-direction: column; gap: 1rem; align-items: center; margin-top: 2rem; animation: fadeUp 0.7s ease forwards;">
+      ${interests.map(i => `<button class="btn secondary" style="width: 350px" onclick="set11thInterest('${i}')">${i}</button>`).join('')}
+    </div>
+  `;
+    }
+
+    function set11thInterest(interest) {
+      data11th.interest = interest;
+      ask11thCareer();
+    }
+
+    function ask11thCareer() {
+      document.querySelector('.hero-content').innerHTML = `
+    <div style="margin-bottom: 2rem; width: 100%; background: rgba(255,255,255,0.1); border-radius: 10px; height: 8px; overflow: hidden;">
+      <div style="width: 70%; height: 100%; background: #64ffda; transition: width 0.3s ease;"></div>
+    </div>
+    <h2 class="hero-title" style="font-size: 2.5rem; animation: fadeUp 0.5s ease forwards;">SECTION 4: Career Awareness</h2>
+    <p class="hero-sub" style="animation: fadeUp 0.6s ease forwards;">Do you already have a career in mind?</p>
+    <div class="quiz-options" style="flex-direction: column; gap: 1.5rem; align-items: center; margin-top: 2rem; animation: fadeUp 0.7s ease forwards;">
+      <div style="display: flex; gap: 1rem; align-items: center;">
+        <input type="text" id="career-mind-input" placeholder="Yes, I want to be a..." style="padding: 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); width: 250px; background: rgba(255,255,255,0.05); color: white; font-size: 1rem;">
+        <button class="btn primary" onclick="set11thCareer(document.getElementById('career-mind-input').value)">Submit</button>
+      </div>
+      <p style="color: rgba(255,255,255,0.6); margin: 0;">OR</p>
+      <button class="btn secondary" style="width: 300px" onclick="set11thCareer('No, I want suggestions')">No, I want suggestions</button>
+    </div>
+  `;
+    }
+
+    function set11thCareer(career) {
+      if (!career.trim()) career = "No, I want suggestions";
+      data11th.careerMind = career;
+      ask11thStudy();
+    }
+
+    function ask11thStudy() {
+      const times = ["< 2 hours", "2–4 hours", "4–6 hours", "6+ hours"];
+      document.querySelector('.hero-content').innerHTML = `
+    <div style="margin-bottom: 2rem; width: 100%; background: rgba(255,255,255,0.1); border-radius: 10px; height: 8px; overflow: hidden;">
+      <div style="width: 80%; height: 100%; background: #64ffda; transition: width 0.3s ease;"></div>
+    </div>
+    <h2 class="hero-title" style="font-size: 2.5rem; animation: fadeUp 0.5s ease forwards;">SECTION 5: Study Commitment</h2>
+    <p class="hero-sub" style="animation: fadeUp 0.6s ease forwards;">How many hours can you realistically study daily?</p>
+    <div class="quiz-options" style="flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 2rem; animation: fadeUp 0.7s ease forwards;">
+      ${times.map(t => `<button class="btn secondary" style="width: 150px" onclick="set11thStudy('${t}')">${t}</button>`).join('')}
+    </div>
+  `;
+    }
+
+    function set11thStudy(time) {
+      data11th.studyTime = time;
+      ask11thExam();
+    }
+
+    function ask11thExam() {
+      const readiness = ["Yes", "No", "Not sure"];
+      document.querySelector('.hero-content').innerHTML = `
+    <div style="margin-bottom: 2rem; width: 100%; background: rgba(255,255,255,0.1); border-radius: 10px; height: 8px; overflow: hidden;">
+      <div style="width: 90%; height: 100%; background: #64ffda; transition: width 0.3s ease;"></div>
+    </div>
+    <h2 class="hero-title" style="font-size: 2.5rem; animation: fadeUp 0.5s ease forwards;">SECTION 6: Exam Readiness</h2>
+    <p class="hero-sub" style="animation: fadeUp 0.6s ease forwards;">Are you interested in preparing for competitive/standardized exams?</p>
+    <div class="quiz-options" style="flex-direction: row; justify-content: center; gap: 1rem; margin-top: 2rem; animation: fadeUp 0.7s ease forwards;">
+      ${readiness.map(r => `<button class="btn secondary" style="width: 150px" onclick="set11thExam('${r}')">${r}</button>`).join('')}
+    </div>
+  `;
+    }
+
+    function set11thExam(exam) {
+      data11th.competitiveExams = exam;
+      ask11thPreference();
+    }
+
+    function ask11thPreference() {
+      const prefs = ["High salary", "Job stability", "Passion/interest", "Work-life balance", "Prestige (doctor, IAS, etc.)"];
+      document.querySelector('.hero-content').innerHTML = `
+    <div style="margin-bottom: 2rem; width: 100%; background: rgba(255,255,255,0.1); border-radius: 10px; height: 8px; overflow: hidden;">
+      <div style="width: 100%; height: 100%; background: #64ffda; transition: width 0.3s ease;"></div>
+    </div>
+    <h2 class="hero-title" style="font-size: 2.5rem; animation: fadeUp 0.5s ease forwards;">SECTION 7: Preference Filter</h2>
+    <p class="hero-sub" style="animation: fadeUp 0.6s ease forwards;">What matters most to you?</p>
+    <div class="quiz-options" style="flex-direction: column; gap: 1rem; align-items: center; margin-top: 2rem; animation: fadeUp 0.7s ease forwards;">
+      ${prefs.map(p => `<button class="btn secondary" style="width: 300px" onclick="set11thPreference('${p}')">${p}</button>`).join('')}
+    </div>
+  `;
+    }
+
+    function set11thPreference(pref) {
+      data11th.preference = pref;
+      generate11thResult();
+    }
+
+    function generate11thResult() {
+      // 1. Calculate Scores
+      let scores = { tech: 0, medical: 0, business: 0, humanities: 0, creative: 0 };
+      
+      // Subject Base (using config weights)
+      let allSubs = [...data11th.subjects, ...data11th.hlSubjects];
+      allSubs.forEach(sub => {
+         let subLower = sub.toLowerCase();
+         if (SUBJECT_WEIGHTS[subLower]) {
+            let weights = SUBJECT_WEIGHTS[subLower];
+            if (weights.tech) scores.tech += weights.tech;
+            if (weights.medical) scores.medical += weights.medical;
+            if (weights.business) scores.business += weights.business;
+            if (weights.humanities) scores.humanities += weights.humanities;
+            if (weights.creative) scores.creative += weights.creative;
+         } else {
+            // Fallback for custom added subjects
+            if (subLower.includes("math") || subLower.includes("tech") || subLower.includes("comp")) scores.tech += 1;
+            else if (subLower.includes("sci") || subLower.includes("bio")) scores.medical += 1;
+            else if (subLower.includes("bus") || subLower.includes("fin") || subLower.includes("acc")) scores.business += 1;
+            else if (subLower.includes("art") || subLower.includes("design")) scores.creative += 1;
+            else scores.humanities += 1;
+         }
+      });
+
+      // Interest Base
+      let i = data11th.interest.toLowerCase();
+      if (i.includes("technology") || i.includes("problem-solving")) scores.tech += 3;
+      if (i.includes("helping")) scores.medical += 2;
+      if (i.includes("business") || i.includes("management")) scores.business += 3;
+      if (i.includes("government") || i.includes("research")) scores.humanities += 2;
+      if (i.includes("creative") || i.includes("design")) scores.creative += 3;
+
+      // Realistic Intelligence Adjustments
+      if (data11th.studyTime.includes("< 2 hrs") || data11th.studyTime.includes("< 2 hours")) {
+         scores.tech = Math.max(0, scores.tech - 1);
+         scores.medical = Math.max(0, scores.medical - 2); // Medicine requires high study time
+      }
+      
+      if (data11th.competitiveExams === "No") {
+         scores.tech = Math.max(0, scores.tech - 1);
+         scores.medical = Math.max(0, scores.medical - 2); 
+         scores.creative += 1; 
+         scores.humanities += 1;
+      }
+
+      // NIOS Adjustments
+      if (data11th.niosReason === "Flexibility for skills") {
+         scores.creative += 1;
+         scores.business += 1;
+      }
+
+      boostScoresFromCareerGoal(scores, data11th.careerMind);
+      data11th.careerScores = scores;
+      let totalScore = Object.values(scores).reduce((a, b) => a + b, 0) || 1;
+      
+      let topClusters = Object.entries(scores).sort((a,b) => b[1] - a[1]);
+
+      let matchHtml = topClusters.map(c => {
+         let pct = Math.round((c[1] / totalScore) * 100);
+         if(pct === 0) return "";
+         let icon = "💻";
+         let label = "Technology & Engineering";
+         if (c[0] === "medical") { icon = "🩺"; label = "Medical & Life Sciences"; }
+         if (c[0] === "business") { icon = "💼"; label = "Business & Finance"; }
+         if (c[0] === "humanities") { icon = "📚"; label = "Humanities & Social Sciences"; }
+         if (c[0] === "creative") { icon = "🎨"; label = "Creative Arts & Design"; }
+         
+         return `
+         <div style="margin-bottom: 1rem;">
+           <div style="display:flex; justify-content:space-between; margin-bottom:0.25rem; font-size:1rem; color:rgba(255,255,255,0.9);">
+             <span>${icon} ${label}</span>
+             <strong>${pct}%</strong>
+           </div>
+           <div style="width: 100%; background: rgba(255,255,255,0.1); border-radius: 4px; height: 6px; overflow: hidden;">
+             <div style="width: ${pct}%; height: 100%; background: #64ffda;"></div>
+           </div>
+         </div>`;
+      }).join('');
+
+      let [primary, secondary, backup] = getTopClusterKeys(
+        scores,
+        ["tech", "medical", "business", "humanities", "creative"]
+      );
+
+      const clusterNames = {
+         tech: "Technology & Engineering",
+         medical: "Medical & Life Sciences",
+         business: "Business & Finance",
+         humanities: "Humanities & Social Sciences",
+         creative: "Creative Arts & Design"
+      };
+
+      let clustersHtml = `
+        <li style="margin-bottom: 0.5rem; color: #64ffda;"><b>Primary Cluster:</b> ${clusterNames[primary]}</li>
+        <li style="margin-bottom: 0.5rem;"><b>Secondary Cluster:</b> ${clusterNames[secondary]}</li>
+        <li style="margin-bottom: 0.5rem; opacity: 0.8;"><b>Backup Cluster:</b> ${clusterNames[backup]}</li>
+      `;
+
+      let careers = [];
+      if (primary === "tech" || secondary === "tech") careers.push("Software / AI Engineer", "Data Scientist", "Architect");
+      if (primary === "medical" || secondary === "medical") {
+        if (hasBiologySubject(data11th.subjects)) {
+          careers.push("Doctor (MBBS/BDS)", "Biotechnologist", "Clinical Psychologist");
+        } else {
+          careers.push("Biotechnologist", "Clinical Psychologist", "Public Health Professional");
+        }
+      }
+      if (primary === "business" || secondary === "business") careers.push("Management Consultant", "Chartered Accountant / CFA", "Investment Banker");
+      if (primary === "humanities" || secondary === "humanities") careers.push("Civil Servant / Policy Analyst", "Lawyer", "Academic Researcher");
+      if (primary === "creative" || secondary === "creative") careers.push("UI/UX Designer", "Filmmaker / Media Professional", "Digital Marketer");
+
+      // Handle user's custom career goals properly
+      if (data11th.careerMind !== "No, I want suggestions") {
+        careers.unshift(`<strong>Your Goal:</strong> ${data11th.careerMind}`);
+      }
+      careers = [...new Set(careers)].slice(0, 5);
+
+      let exams = [];
+      if (data11th.board === "IB" || data11th.board === "Cambridge") {
+         exams = ["SAT / ACT (US Applications)", "IELTS / TOEFL (English Proficiency)", "UCAS Application (UK)", "Program-specific entry requirements"];
+      } else {
+         if (primary === "tech") exams.push("JEE Main & Advanced", "BITSAT", "CUET");
+         if (primary === "medical") exams.push("NEET", "CUET (for B.Sc)");
+         if (primary === "business") exams.push("IPMAT", "CUET", "CA Foundation");
+         if (primary === "humanities") exams.push("CUET", "CLAT (Law)");
+         if (primary === "creative") exams.push("NIFT / NID", "CUET");
+      }
+
+      if (data11th.niosReason === "Competitive exam focus") {
+         exams.push("Heavy focus on core entrance exams over board marks");
+      }
+
+      if (data11th.competitiveExams === "No") {
+        if (data11th.board === "IB" || data11th.board === "Cambridge") {
+           exams = ["Direct University Admissions", "Profile Building (Internships, Extracurriculars)"];
+        } else {
+           exams = ["Direct Admission / Merit Based", "Private University Entrance"];
+        }
+      }
+
+      let roadmap = {};
+      if (data11th.board === "IB" || data11th.board === "Cambridge") {
+          roadmap = {
+          start: "Start NOW: Profile building, Extracurriculars, and Standardized Testing (SAT/IELTS).",
+          daily: data11th.studyTime === "6+ hours" ? "3 hrs coursework, 3+ hrs test prep & profile building." : "Dedicate at least 2 hours daily to SAT prep & essay writing.",
+          focus: "HL/A-Level Core subjects + Extended Essay / Coursework.",
+          coaching: "Admissions counseling and structured standardized test prep."
+        };
+      } else if (data11th.competitiveExams === "Yes") {
+        roadmap = {
+          start: "Start NOW (11th Grade) to build strong fundamentals.",
+          daily: data11th.studyTime === "6+ hours" ? "3 hrs school revision, 3+ hrs exam prep & mock tests." : "Dedicate at least 2 hours daily specifically for entrance prep.",
+          focus: data11th.subjects.length > 0 ? data11th.subjects.join(", ") : "Core stream subjects",
+          coaching: "Highly recommended to join a structured coaching program for competitive exams."
+        };
+      } else {
+        roadmap = {
+          start: "Focus on 11th basics now, ramp up in 12th for boards.",
+          daily: "Consistent " + data11th.studyTime + " of focused study.",
+          focus: "NCERT/Board textbooks and conceptual clarity.",
+          coaching: "Self-study with good reference books and online videos is sufficient."
+        };
+      }
+
+      let action11 = "Focus on understanding concepts deeply. Do not ignore 11th syllabus as it forms the base for 12th.";
+      let action12 = "Shift focus to board patterns or intense entrance prep. Start solving previous year papers by mid-year.";
+      let actionAfter = "Appear for exams, explore backup colleges, and focus on practical skill-building during the gap before college.";
+
+      let smartSugg = "";
+      if (data11th.careerMind === "No, I want suggestions" || data11th.stream === "Not decided yet") {
+        smartSugg = "💡 <b>Exploration Phase:</b> Take short online courses or watch day-in-the-life videos to see what interests you.";
+      } else if (data11th.studyTime === "< 2 hours" && data11th.competitiveExams === "Yes") {
+        smartSugg = "⚠️ <b>Reality Check:</b> Competitive exams require intense prep. You need to gradually increase your study time to at least 4-6 hours.";
+      } else if (data11th.preference === "High salary" || data11th.preference === "Prestige (doctor, IAS, etc.)") {
+        smartSugg = "🚀 <b>High Ambition:</b> High rewards require high effort. Stay extremely consistent and avoid distractions. Focus on top-tier exams.";
+      } else {
+        smartSugg = "✨ <b>Balanced Approach:</b> Keep a backup plan ready. Focus on consistency rather than burning out.";
+      }
+
+      let boardAdvice = "";
+      if (data11th.board === "CBSE" || data11th.board === "CISCE" || data11th.board === "State Board") {
+        boardAdvice = "Focus on conceptual clarity and balance your time efficiently between board preparation and entrance exams.";
+      } else if (data11th.board === "IB" || data11th.board === "Cambridge") {
+        boardAdvice = "Focus deeply on profile building, holistic extracurriculars, and maintaining strong academic rigor across your subjects.";
+      } else if (data11th.board === "NIOS") {
+        boardAdvice = "Use your flexibility strategically. Dedicate the extra hours you have toward skill building or rigorous entrance test prep.";
+      } else {
+        boardAdvice = "Maintain a strong percentage and focus on parallel preparation for national or state-level entrances.";
+      }
+
+      document.querySelector('.hero-content').innerHTML = `
+    <h2 class="hero-title" style="font-size: 2.5rem; margin-bottom: 1rem;">Your Personalized Career Blueprint</h2>
+    
+    <div style="text-align: left; background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); max-width: 800px; margin: 0 auto; line-height: 1.6;">
+      
+      <h3 style="color: #64ffda; font-size: 1.5rem; margin-top: 0;">🏫 Board Strategy (${data11th.board})</h3>
+      <div style="background: rgba(100, 255, 218, 0.1); border-left: 4px solid #64ffda; padding: 1.5rem; border-radius: 4px; margin-bottom: 2rem; font-size: 1.1rem;">
+        ${boardAdvice}
+      </div>
+
+      <h3 style="color: #64ffda; font-size: 1.5rem; margin-top: 0;">📊 1. Career Direction Match</h3>
+      <div style="margin-bottom: 2rem; padding: 1.5rem; background: rgba(0,0,0,0.2); border-radius: 8px;">
+        ${matchHtml}
+      </div>
+
+      <h3 style="color: #64ffda; margin-top: 0; font-size: 1.5rem;">🎓 2. Suggested Career Paths</h3>
+      <ul style="margin-bottom: 1.5rem; padding-left: 1.5rem; font-size: 1.1rem; color: rgba(255,255,255,0.9);">
+        ${clustersHtml}
+        <hr style="border: none; border-top: 1px solid rgba(255,255,255,0.1); margin: 1rem 0;">
+        ${careers.map(c => `<li style="margin-bottom: 0.5rem;">${c}</li>`).join('')}
+      </ul>
+
+      <h3 style="color: #64ffda; font-size: 1.5rem;">📝 3. Relevant Exams</h3>
+      <ul style="margin-bottom: 1.5rem; padding-left: 1.5rem; font-size: 1.1rem; color: rgba(255,255,255,0.9);">
+        ${exams.map(e => `<li style="margin-bottom: 0.5rem;">${e}</li>`).join('')}
+      </ul>
+
+      <h3 style="color: #64ffda; font-size: 1.5rem;">📅 4. Preparation Roadmap</h3>
+      <ul style="margin-bottom: 1.5rem; padding-left: 1.5rem; font-size: 1.1rem; color: rgba(255,255,255,0.9);">
+        <li style="margin-bottom: 0.5rem;"><b>When to start:</b> ${roadmap.start}</li>
+        <li style="margin-bottom: 0.5rem;"><b>Daily Plan:</b> ${roadmap.daily}</li>
+        <li style="margin-bottom: 0.5rem;"><b>Key Focus Subjects:</b> ${roadmap.focus}</li>
+        <li style="margin-bottom: 0.5rem;"><b>Prep Mode:</b> ${roadmap.coaching}</li>
+      </ul>
+
+      <h3 style="color: #64ffda; font-size: 1.5rem;">🛠️ 5. Step-by-Step Action Plan</h3>
+      <ul style="margin-bottom: 1.5rem; padding-left: 1.5rem; font-size: 1.1rem; color: rgba(255,255,255,0.9);">
+        <li style="margin-bottom: 0.5rem;"><b>In 11th:</b> ${action11}</li>
+        <li style="margin-bottom: 0.5rem;"><b>In 12th:</b> ${action12}</li>
+        <li style="margin-bottom: 0.5rem;"><b>After Boards:</b> ${actionAfter}</li>
+      </ul>
+
+      <div style="background: rgba(255, 193, 7, 0.1); border-left: 4px solid #ffc107; padding: 1.5rem; border-radius: 4px; margin-top: 2rem; font-size: 1.1rem;">
+        ${smartSugg}
+      </div>
+
+    </div>
+
+    <div class="hero-buttons" style="margin-top: 2.5rem;">
+      <button class="btn primary" onclick="location.reload()">Start Again</button>
+    </div>
+  `;
+
+      document.querySelector('.hero-content').scrollIntoView({ behavior: 'smooth' });
+      saveQuizResultToBackend({
+        level: "11th",
+        resultTitle: "Personalized Career Blueprint",
+        resultSummary: `Board: ${data11th.board}, Interest: ${data11th.interest}, Study Time: ${data11th.studyTime}`,
+        raw: { data11th }
+      });
+    }
+
+    // --- 12TH GRADE FLOW ---
+    let data12th = {
+      board: "",
+      subjects: [],
+      hlSubjects: [],
+      niosReason: "",
+      interest: "",
+      careerMind: "",
+      studyTime: "",
+      competitiveExams: "",
+      preference: "",
+      careerScores: { tech: 0, medical: 0, business: 0, humanities: 0, creative: 0 }
+    };
+
+    function start12thFlow() {
+      data12th = { board: "", subjects: [], hlSubjects: [], niosReason: "", interest: "", careerMind: "", studyTime: "", competitiveExams: "", preference: "", careerScores: { tech: 0, medical: 0, business: 0, humanities: 0, creative: 0 } };
+
+      document.querySelector('.hero-content').innerHTML = `
+    <div style="margin-bottom: 2rem; width: 100%; background: rgba(255,255,255,0.1); border-radius: 10px; height: 8px; overflow: hidden;">
+      <div style="width: 15%; height: 100%; background: #64ffda; transition: width 0.3s ease;"></div>
+    </div>
+    <h2 class="hero-title" style="font-size: 2.5rem;">SECTION 1: Educational Board</h2>
+    <p class="hero-sub">Which board are you studying under for your 12th exams?</p>
+    <div class="quiz-options" style="flex-direction: column; gap: 1rem; align-items: center; margin-top: 2rem;">
+      <button class="btn secondary" style="width: 300px" onclick="set12thBoard('CBSE')">CBSE</button>
+      <button class="btn secondary" style="width: 300px" onclick="set12thBoard('CISCE')">CISCE</button>
+      <button class="btn secondary" style="width: 300px" onclick="set12thBoard('NIOS')">NIOS</button>
+      <button class="btn secondary" style="width: 300px" onclick="set12thBoard('IB')">IB</button>
+      <button class="btn secondary" style="width: 300px" onclick="set12thBoard('Cambridge')">Cambridge</button>
+      <button class="btn secondary" style="width: 300px" onclick="set12thBoard('State Board')">State Board</button>
+    </div>
+  `;
+    }
+
+    function set12thBoard(board) {
+      data12th.board = board;
+      if (board === "NIOS") {
+        ask12thNIOSReason();
+      } else {
+        ask12thUnifiedSubjects();
+      }
+    }
+
+    function ask12thNIOSReason() {
+      document.querySelector('.hero-content').innerHTML = `
+    <div style="margin-bottom: 2rem; width: 100%; background: rgba(255,255,255,0.1); border-radius: 10px; height: 8px; overflow: hidden;">
+      <div style="width: 25%; height: 100%; background: #64ffda; transition: width 0.3s ease;"></div>
+    </div>
+    <h2 class="hero-title" style="font-size: 2.5rem; animation: fadeUp 0.5s ease forwards;">SECTION 1.5: NIOS Path</h2>
+    <p class="hero-sub" style="animation: fadeUp 0.6s ease forwards;">Why did you choose NIOS?</p>
+    <div class="quiz-options" style="flex-direction: column; gap: 1rem; align-items: center; margin-top: 2rem; animation: fadeUp 0.7s ease forwards;">
+      <button class="btn secondary" style="width: 350px" onclick="set12thNIOSReason('Flexibility for skills')">Flexibility for skills/interests</button>
+      <button class="btn secondary" style="width: 350px" onclick="set12thNIOSReason('Competitive exam focus')">Competitive exam focus</button>
+      <button class="btn secondary" style="width: 350px" onclick="set12thNIOSReason('Personal reasons')">Personal reasons</button>
+    </div>
+  `;
+    }
+
+    function set12thNIOSReason(reason) {
+      data12th.niosReason = reason;
+      ask12thUnifiedSubjects();
+    }
+
+    function ask12thUnifiedSubjects() {
+      let subjectsHtml = UNIFIED_SUBJECTS.map(sub => `
+    <button class="btn secondary subj-btn" onclick="toggle12thUnifiedSubject(this, '${sub}')" style="margin: 0.5rem">${sub}</button>
+  `).join('');
+
+      let hint = "Select your subjects.";
+      let presetsHtml = "";
+
+      if (["CBSE", "CISCE", "State Board"].includes(data12th.board)) {
+        hint = "Select 4–6 subjects based on your combination.";
+        presetsHtml = `
+          <div style="margin-bottom: 1.5rem; display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap;">
+             <span style="color: rgba(255,255,255,0.6); align-self: center; margin-right: 0.5rem;">Quick Select:</span>
+             <button class="btn secondary preset-btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="applyPreset12th(['Mathematics', 'Physics', 'Chemistry', 'English'])">Science (PCM)</button>
+             <button class="btn secondary preset-btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="applyPreset12th(['Biology', 'Physics', 'Chemistry', 'English'])">Science (PCB)</button>
+             <button class="btn secondary preset-btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="applyPreset12th(['Accountancy', 'Business Studies', 'Economics', 'English'])">Commerce</button>
+             <button class="btn secondary preset-btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="applyPreset12th(['History', 'Geography', 'Political Science', 'English'])">Arts</button>
+          </div>
+        `;
+      } else if (data12th.board === "IB") {
+        hint = "Select 5–7 subjects for your IB Diploma.";
+      } else if (data12th.board === "Cambridge") {
+        hint = "Select 3–5 subjects for your A-Levels.";
+      } else {
+        hint = "Select your core subjects.";
+      }
+
+      document.querySelector('.hero-content').innerHTML = `
+    <div style="margin-bottom: 2rem; width: 100%; background: rgba(255,255,255,0.1); border-radius: 10px; height: 8px; overflow: hidden;">
+      <div style="width: 30%; height: 100%; background: #64ffda; transition: width 0.3s ease;"></div>
+    </div>
+    <h2 class="hero-title" style="font-size: 2.5rem; animation: fadeUp 0.5s ease forwards;">SECTION 2: Subject Selection</h2>
+    <p class="hero-sub" style="animation: fadeUp 0.6s ease forwards;">${hint}</p>
+    
+    <div class="quiz-options" style="flex-direction: column; align-items: center; max-width: 800px; margin: 2rem auto; animation: fadeUp 0.7s ease forwards;">
+      ${presetsHtml}
+      <div id="subject-container-12" style="display: flex; flex-wrap: wrap; justify-content: center;">
+        ${subjectsHtml}
+      </div>
+      <div style="width: 100%; margin-top: 1.5rem; display: flex; justify-content: center; gap: 0.5rem">
+        <input type="text" id="other-subject-12" placeholder="Custom subject..." style="padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); width: 200px; background: rgba(255,255,255,0.05); color: white;">
+        <button class="btn secondary" onclick="addOther12thUnifiedSubject()">Add</button>
+      </div>
+    </div>
+    <div class="hero-buttons" style="margin-top: 2rem; animation: fadeUp 0.8s ease forwards;">
+      <button class="btn primary" onclick="submit12thUnifiedSubjects()">Next Step ➔</button>
+    </div>
+  `;
+    }
+
+    function toggle12thUnifiedSubject(btn, subject) {
+      btn.classList.toggle('primary');
+      btn.classList.toggle('secondary');
+
+      if (data12th.subjects.includes(subject)) {
+        data12th.subjects = data12th.subjects.filter(s => s !== subject);
+      } else {
+        data12th.subjects.push(subject);
+      }
+    }
+
+    function applyPreset12th(presetSubjects) {
+      data12th.subjects = [];
+      const btns = document.querySelectorAll('#subject-container-12 .subj-btn');
+      btns.forEach(btn => {
+         btn.classList.remove('primary');
+         btn.classList.add('secondary');
+         let text = btn.innerText;
+         if (presetSubjects.includes(text)) {
+            btn.classList.remove('secondary');
+            btn.classList.add('primary');
+            data12th.subjects.push(text);
+         }
+      });
+    }
+
+    function addOther12thUnifiedSubject() {
+      const input = document.getElementById('other-subject-12');
+      const val = input.value.trim();
+      if (val && !data12th.subjects.includes(val)) {
+        data12th.subjects.push(val);
+        const btn = document.createElement('button');
+        btn.className = 'btn primary subj-btn';
+        btn.style.margin = '0.5rem';
+        btn.innerText = val;
+        btn.onclick = () => toggle12thUnifiedSubject(btn, val);
+
+        document.getElementById('subject-container-12').appendChild(btn);
+        input.value = '';
+      }
+    }
+
+    function validate12thSubjectsByBoard() {
+      const b = data12th.board;
+      const len = data12th.subjects.length;
+      if (b === "IB" && (len < 5 || len > 7)) {
+         alert("IB students usually take 6 subjects. Please select 5-7 subjects.");
+         return false;
+      }
+      if (b === "Cambridge" && (len < 3 || len > 5)) {
+         alert("A-Level students usually take 3-5 subjects.");
+         return false;
+      }
+      if (["CBSE", "CISCE", "State Board"].includes(b) && (len < 4 || len > 6)) {
+         alert("Please select 4-6 subjects based on your stream combination.");
+         return false;
+      }
+      if (len === 0) {
+         alert("Please select at least one subject.");
+         return false;
+      }
+      return true;
+    }
+
+    function submit12thUnifiedSubjects() {
+      const input = document.getElementById('other-subject-12');
+      if (input && input.value.trim() && !data12th.subjects.includes(input.value.trim())) {
+        data12th.subjects.push(input.value.trim());
+      }
+      
+      if (!validate12thSubjectsByBoard()) return;
+
+      if (data12th.board === "IB") {
+        ask12thUnifiedIBHL();
+      } else {
+        ask12thInterest();
+      }
+    }
+
+    function ask12thUnifiedIBHL() {
+      let html = data12th.subjects.map(sub => `
+    <button class="btn secondary subj-btn" onclick="toggle12thUnifiedHL(this, '${sub}')" style="margin: 0.5rem">${sub}</button>
+  `).join('');
+
+      document.querySelector('.hero-content').innerHTML = `
+    <div style="margin-bottom: 2rem; width: 100%; background: rgba(255,255,255,0.1); border-radius: 10px; height: 8px; overflow: hidden;">
+      <div style="width: 45%; height: 100%; background: #64ffda; transition: width 0.3s ease;"></div>
+    </div>
+    <h2 class="hero-title" style="font-size: 2.5rem; animation: fadeUp 0.5s ease forwards;">SECTION 2.5: Higher Level (HL) Subjects</h2>
+    <p class="hero-sub" style="animation: fadeUp 0.6s ease forwards;">(Multi-select) Which of your selected subjects are Higher Level (HL)?</p>
+    <div class="quiz-options" style="flex-wrap: wrap; justify-content: center; max-width: 800px; margin: 2rem auto; animation: fadeUp 0.7s ease forwards;">
+      ${html}
+    </div>
+    <div class="hero-buttons" style="margin-top: 2rem; animation: fadeUp 0.8s ease forwards;">
+      <button class="btn primary" onclick="submit12thUnifiedIB()">Next Step ➔</button>
+    </div>
+  `;
+    }
+
+    function toggle12thUnifiedHL(btn, subject) {
+      btn.classList.toggle('primary');
+      btn.classList.toggle('secondary');
+      if (data12th.hlSubjects.includes(subject)) {
+        data12th.hlSubjects = data12th.hlSubjects.filter(s => s !== subject);
+      } else {
+        data12th.hlSubjects.push(subject);
+      }
+    }
+
+    function submit12thUnifiedIB() {
+      if(data12th.hlSubjects.length > 4) {
+         return alert("IB students usually take a maximum of 3-4 HL subjects.");
+      }
+      ask12thInterest();
+    }
+
+    function ask12thInterest() {
+      const interests = [
+        "Problem-solving / logical thinking",
+        "Creative work (design, writing, media)",
+        "Helping people (doctor, social work)",
+        "Business / money / management",
+        "Technology / coding / AI",
+        "Government / civil services",
+        "Research / academics"
+      ];
+
+      document.querySelector('.hero-content').innerHTML = `
+    <h2 class="hero-title" style="font-size: 2.5rem;">SECTION 3: Interest Type</h2>
+    <p class="hero-sub">What type of work interests you the most?</p>
+    <div class="quiz-options" style="flex-direction: column; gap: 1rem; align-items: center; margin-top: 2rem;">
+      ${interests.map(i => `<button class="btn secondary" style="width: 350px" onclick="set12thInterest('${i}')">${i}</button>`).join('')}
+    </div>
+  `;
+    }
+
+    function set12thInterest(interest) {
+      data12th.interest = interest;
+      ask12thCareer();
+    }
+
+    function ask12thCareer() {
+      document.querySelector('.hero-content').innerHTML = `
+    <h2 class="hero-title" style="font-size: 2.5rem;">SECTION 4: Career Awareness</h2>
+    <p class="hero-sub">Do you already have a career in mind?</p>
+    <div class="quiz-options" style="flex-direction: column; gap: 1.5rem; align-items: center; margin-top: 2rem;">
+      <div style="display: flex; gap: 1rem; align-items: center;">
+        <input type="text" id="career-mind-input-12" placeholder="Yes, I want to be a..." style="padding: 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); width: 250px; background: rgba(255,255,255,0.05); color: white; font-size: 1rem;">
+        <button class="btn primary" onclick="set12thCareer(document.getElementById('career-mind-input-12').value)">Submit</button>
+      </div>
+      <p style="color: rgba(255,255,255,0.6); margin: 0;">OR</p>
+      <button class="btn secondary" style="width: 300px" onclick="set12thCareer('No, I want suggestions')">No, I want suggestions</button>
+    </div>
+  `;
+    }
+
+    function set12thCareer(career) {
+      if (!career.trim()) career = "No, I want suggestions";
+      data12th.careerMind = career;
+      ask12thStudy();
+    }
+
+    function ask12thStudy() {
+      const times = ["< 2 hours", "2–4 hours", "4–6 hours", "6+ hours"];
+      document.querySelector('.hero-content').innerHTML = `
+    <h2 class="hero-title" style="font-size: 2.5rem;">SECTION 5: Study Commitment</h2>
+    <p class="hero-sub">How many hours can you realistically study daily right now?</p>
+    <div class="quiz-options" style="flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 2rem;">
+      ${times.map(t => `<button class="btn secondary" style="width: 150px" onclick="set12thStudy('${t}')">${t}</button>`).join('')}
+    </div>
+  `;
+    }
+
+    function set12thStudy(time) {
+      data12th.studyTime = time;
+      ask12thExam();
+    }
+
+    function ask12thExam() {
+      const readiness = ["Yes", "No", "Not sure"];
+      document.querySelector('.hero-content').innerHTML = `
+    <h2 class="hero-title" style="font-size: 2.5rem;">SECTION 6: Exam Readiness</h2>
+    <p class="hero-sub">Are you preparing for competitive exams?</p>
+    <div class="quiz-options" style="flex-direction: row; justify-content: center; gap: 1rem; margin-top: 2rem;">
+      ${readiness.map(r => `<button class="btn secondary" style="width: 150px" onclick="set12thExam('${r}')">${r}</button>`).join('')}
+    </div>
+  `;
+    }
+
+    function set12thExam(exam) {
+      data12th.competitiveExams = exam;
+      ask12thPreference();
+    }
+
+    function ask12thPreference() {
+      const prefs = ["High salary", "Job stability", "Passion/interest", "Work-life balance", "Prestige (doctor, IAS, etc.)"];
+      document.querySelector('.hero-content').innerHTML = `
+    <h2 class="hero-title" style="font-size: 2.5rem;">SECTION 7: Preference Filter</h2>
+    <p class="hero-sub">What matters most to you in your future career?</p>
+    <div class="quiz-options" style="flex-direction: column; gap: 1rem; align-items: center; margin-top: 2rem;">
+      ${prefs.map(p => `<button class="btn secondary" style="width: 300px" onclick="set12thPreference('${p}')">${p}</button>`).join('')}
+    </div>
+  `;
+    }
+
+    function set12thPreference(pref) {
+      data12th.preference = pref;
+      generate12thResult();
+    }
+
+    function generate12thResult() {
+      // 1. Calculate Scores
+      let scores = { tech: 0, medical: 0, business: 0, humanities: 0, creative: 0 };
+      
+      // Subject Base (using config weights)
+      let allSubs = [...data12th.subjects, ...data12th.hlSubjects];
+      allSubs.forEach(sub => {
+         let subLower = sub.toLowerCase();
+         if (SUBJECT_WEIGHTS[subLower]) {
+            let weights = SUBJECT_WEIGHTS[subLower];
+            if (weights.tech) scores.tech += weights.tech;
+            if (weights.medical) scores.medical += weights.medical;
+            if (weights.business) scores.business += weights.business;
+            if (weights.humanities) scores.humanities += weights.humanities;
+            if (weights.creative) scores.creative += weights.creative;
+         } else {
+            // Fallback for custom added subjects
+            if (subLower.includes("math") || subLower.includes("tech") || subLower.includes("comp")) scores.tech += 1;
+            else if (subLower.includes("sci") || subLower.includes("bio")) scores.medical += 1;
+            else if (subLower.includes("bus") || subLower.includes("fin") || subLower.includes("acc")) scores.business += 1;
+            else if (subLower.includes("art") || subLower.includes("design")) scores.creative += 1;
+            else scores.humanities += 1;
+         }
+      });
+
+      // Interest Base
+      let i = data12th.interest.toLowerCase();
+      if (i.includes("technology") || i.includes("problem-solving")) scores.tech += 3;
+      if (i.includes("helping")) scores.medical += 2;
+      if (i.includes("business") || i.includes("management")) scores.business += 3;
+      if (i.includes("government") || i.includes("research")) scores.humanities += 2;
+      if (i.includes("creative") || i.includes("design")) scores.creative += 3;
+
+      // Realistic Intelligence Adjustments
+      if (data12th.studyTime.includes("< 2 hrs") || data12th.studyTime.includes("< 2 hours")) {
+         scores.tech = Math.max(0, scores.tech - 1);
+         scores.medical = Math.max(0, scores.medical - 2); // Medicine requires high study time
+      }
+      
+      if (data12th.competitiveExams === "No") {
+         scores.tech = Math.max(0, scores.tech - 1);
+         scores.medical = Math.max(0, scores.medical - 2); 
+         scores.creative += 1; 
+         scores.humanities += 1;
+      }
+
+      // NIOS Adjustments
+      if (data12th.niosReason === "Flexibility for skills") {
+         scores.creative += 1;
+         scores.business += 1;
+      }
+
+      boostScoresFromCareerGoal(scores, data12th.careerMind);
+      data12th.careerScores = scores;
+      let totalScore = Object.values(scores).reduce((a, b) => a + b, 0) || 1;
+      
+      let topClusters = Object.entries(scores).sort((a,b) => b[1] - a[1]);
+
+      let matchHtml = topClusters.map(c => {
+         let pct = Math.round((c[1] / totalScore) * 100);
+         if(pct === 0) return "";
+         let icon = "💻";
+         let label = "Technology & Engineering";
+         if (c[0] === "medical") { icon = "🩺"; label = "Medical & Life Sciences"; }
+         if (c[0] === "business") { icon = "💼"; label = "Business & Finance"; }
+         if (c[0] === "humanities") { icon = "📚"; label = "Humanities & Social Sciences"; }
+         if (c[0] === "creative") { icon = "🎨"; label = "Creative Arts & Design"; }
+         
+         return `
+         <div style="margin-bottom: 1rem;">
+           <div style="display:flex; justify-content:space-between; margin-bottom:0.25rem; font-size:1rem; color:rgba(255,255,255,0.9);">
+             <span>${icon} ${label}</span>
+             <strong>${pct}%</strong>
+           </div>
+           <div style="width: 100%; background: rgba(255,255,255,0.1); border-radius: 4px; height: 6px; overflow: hidden;">
+             <div style="width: ${pct}%; height: 100%; background: #64ffda;"></div>
+           </div>
+         </div>`;
+      }).join('');
+
+      let [primary, secondary, backup] = getTopClusterKeys(
+        scores,
+        ["tech", "medical", "business", "humanities", "creative"]
+      );
+
+      const clusterNames = {
+         tech: "Technology & Engineering",
+         medical: "Medical & Life Sciences",
+         business: "Business & Finance",
+         humanities: "Humanities & Social Sciences",
+         creative: "Creative Arts & Design"
+      };
+
+      let clustersHtml = `
+        <li style="margin-bottom: 0.5rem; color: #64ffda;"><b>Primary Cluster:</b> ${clusterNames[primary]}</li>
+        <li style="margin-bottom: 0.5rem;"><b>Secondary Cluster:</b> ${clusterNames[secondary]}</li>
+        <li style="margin-bottom: 0.5rem; opacity: 0.8;"><b>Backup Cluster:</b> ${clusterNames[backup]}</li>
+      `;
+
+      let careers = [];
+      if (primary === "tech" || secondary === "tech") careers.push("Software / AI Engineer", "Data Scientist", "Architect");
+      if (primary === "medical" || secondary === "medical") {
+        if (hasBiologySubject(data12th.subjects)) {
+          careers.push("Doctor (MBBS/BDS)", "Biotechnologist", "Clinical Psychologist");
+        } else {
+          careers.push("Biotechnologist", "Clinical Psychologist", "Public Health Professional");
+        }
+      }
+      if (primary === "business" || secondary === "business") careers.push("Management Consultant", "Chartered Accountant / CFA", "Investment Banker");
+      if (primary === "humanities" || secondary === "humanities") careers.push("Civil Servant / Policy Analyst", "Lawyer", "Academic Researcher");
+      if (primary === "creative" || secondary === "creative") careers.push("UI/UX Designer", "Filmmaker / Media Professional", "Digital Marketer");
+
+      // Handle user's custom career goals properly
+      if (data12th.careerMind !== "No, I want suggestions") {
+        careers.unshift(`<strong>Your Goal:</strong> ${data12th.careerMind}`);
+      }
+      careers = [...new Set(careers)].slice(0, 5);
+
+      let exams = [];
+      if (data12th.board === "IB" || data12th.board === "Cambridge") {
+         exams = ["SAT / ACT (US Applications)", "IELTS / TOEFL (English Proficiency)", "UCAS Application (UK)", "Program-specific entry requirements"];
+      } else {
+         if (primary === "tech") exams.push("JEE Main & Advanced", "BITSAT", "CUET");
+         if (primary === "medical") exams.push("NEET", "CUET (for B.Sc)");
+         if (primary === "business") exams.push("IPMAT", "CUET", "CA Foundation");
+         if (primary === "humanities") exams.push("CUET", "CLAT (Law)");
+         if (primary === "creative") exams.push("NIFT / NID", "CUET");
+      }
+
+      if (data12th.niosReason === "Competitive exam focus") {
+         exams.push("Heavy focus on core entrance exams over board marks");
+      }
+
+      if (data12th.competitiveExams === "No") {
+        if (data12th.board === "IB" || data12th.board === "Cambridge") {
+           exams = ["Direct University Admissions", "Profile Building (Internships, Extracurriculars)"];
+        } else {
+           exams = ["Direct Admission / Merit Based", "Private University Entrance"];
+        }
+      }
+
+      if (data12th.competitiveExams === "Yes") {
+        roadmap = {
+          start: "Immediate focus needed. Maximize mock tests and revision.",
+          daily: data12th.studyTime === "6+ hours" ? "Intense preparation mode: solving past papers daily." : "Every minute counts. Try to increase hours for dedicated exam prep.",
+          focus: data12th.subjects.length > 0 ? data12th.subjects.join(", ") : "Core stream subjects",
+          coaching: "Test series, crash courses, and doubt clearing sessions are vital."
+        };
+      } else {
+        roadmap = {
+          start: "Focus fully on Board exams right now to secure a strong foundation.",
+          daily: "Consistent " + data12th.studyTime + " of focused study on NCERT/Textbooks.",
+          focus: "Scoring high in Boards for merit-based admissions.",
+          coaching: "Self-study and school revision."
+        };
+      }
+
+      action12 = "Balance board exams with entrance prep if applicable. Register for exams on time. Do not neglect language subjects for overall percentage.";
+      actionAfter = "Participate in counseling, research college placements, and learn a practical skill (like Excel, coding, or communication) before college starts.";
+
+      if (data12th.careerMind === "No, I want suggestions") {
+        smartSugg = "💡 <b>Decision Time:</b> Since you are in 12th, narrow down your options fast. Shortlist 2-3 colleges and track their admission processes.";
+      } else if (data12th.studyTime === "< 2 hours" && data12th.competitiveExams === "Yes") {
+        smartSugg = "⚠️ <b>Reality Check:</b> Less than 2 hours is very low for 12th grade competitive prep. You must drastically scale up your study time immediately.";
+      } else if (data12th.preference === "High salary" || data12th.preference === "Prestige (doctor, IAS, etc.)") {
+        smartSugg = "🚀 <b>High Ambition:</b> High rewards require high effort. Stay extremely consistent. Don't let board pressure distract you from your main goal.";
+      } else {
+        smartSugg = "✨ <b>Balanced Approach:</b> Don't panic. Maintain a steady pace, take adequate breaks, and focus on accuracy.";
+      }
+
+      let boardAdvice = "";
+      if (data12th.board === "CBSE" || data12th.board === "CISCE") {
+        boardAdvice = "Aim for strong board marks and verify the latest cutoffs for your target colleges before finalizing your plan.";
+      } else if (data12th.board === "IB" || data12th.board === "Cambridge") {
+        boardAdvice = "Aim for consistently strong grades and verify current offer conditions directly from your target university websites.";
+      } else {
+        boardAdvice = "Target strong board performance and verify current state and university eligibility rules from official portals.";
+      }
+
+      document.querySelector('.hero-content').innerHTML = `
+    <h2 class="hero-title" style="font-size: 2.5rem; margin-bottom: 1rem;">Your Personalized 12th Grade Blueprint</h2>
+    
+    <div style="text-align: left; background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); max-width: 800px; margin: 0 auto; line-height: 1.6;">
+      
+      <h3 style="color: #64ffda; font-size: 1.5rem; margin-top: 0;">🏫 Board Strategy (${data12th.board})</h3>
+      <div style="background: rgba(100, 255, 218, 0.1); border-left: 4px solid #64ffda; padding: 1.5rem; border-radius: 4px; margin-bottom: 2rem; font-size: 1.1rem;">
+        ${boardAdvice}
+      </div>
+
+      <h3 style="color: #64ffda; font-size: 1.5rem; margin-top: 0;">📊 1. Career Direction Match</h3>
+      <div style="margin-bottom: 2rem; padding: 1.5rem; background: rgba(0,0,0,0.2); border-radius: 8px;">
+        ${matchHtml}
+      </div>
+
+      <h3 style="color: #64ffda; margin-top: 0; font-size: 1.5rem;">🎓 2. Suggested Career Paths</h3>
+      <ul style="margin-bottom: 1.5rem; padding-left: 1.5rem; font-size: 1.1rem; color: rgba(255,255,255,0.9);">
+        ${clustersHtml}
+        <hr style="border: none; border-top: 1px solid rgba(255,255,255,0.1); margin: 1rem 0;">
+        ${careers.map(c => `<li style="margin-bottom: 0.5rem;">${c}</li>`).join('')}
+      </ul>
+
+      <h3 style="color: #64ffda; font-size: 1.5rem;">📝 3. Relevant Exams</h3>
+      <ul style="margin-bottom: 1.5rem; padding-left: 1.5rem; font-size: 1.1rem; color: rgba(255,255,255,0.9);">
+        ${exams.map(e => `<li style="margin-bottom: 0.5rem;">${e}</li>`).join('')}
+      </ul>
+
+      <h3 style="color: #64ffda; font-size: 1.5rem;">📅 4. Preparation Roadmap</h3>
+      <ul style="margin-bottom: 1.5rem; padding-left: 1.5rem; font-size: 1.1rem; color: rgba(255,255,255,0.9);">
+        <li style="margin-bottom: 0.5rem;"><b>Immediate Action:</b> ${roadmap.start}</li>
+        <li style="margin-bottom: 0.5rem;"><b>Daily Plan:</b> ${roadmap.daily}</li>
+        <li style="margin-bottom: 0.5rem;"><b>Key Focus Subjects:</b> ${roadmap.focus}</li>
+        <li style="margin-bottom: 0.5rem;"><b>Prep Mode:</b> ${roadmap.coaching}</li>
+      </ul>
+
+      <h3 style="color: #64ffda; font-size: 1.5rem;">🛠️ 5. Action Plan</h3>
+      <ul style="margin-bottom: 1.5rem; padding-left: 1.5rem; font-size: 1.1rem; color: rgba(255,255,255,0.9);">
+        <li style="margin-bottom: 0.5rem;"><b>Right Now (12th):</b> ${action12}</li>
+        <li style="margin-bottom: 0.5rem;"><b>After Boards:</b> ${actionAfter}</li>
+      </ul>
+
+      <div style="background: rgba(255, 193, 7, 0.1); border-left: 4px solid #ffc107; padding: 1.5rem; border-radius: 4px; margin-top: 2rem; font-size: 1.1rem;">
+        ${smartSugg}
+      </div>
+
+    </div>
+
+    <div class="hero-buttons" style="margin-top: 2.5rem;">
+      <button class="btn primary" onclick="location.reload()">Start Again</button>
+    </div>
+  `;
+      saveQuizResultToBackend({
+        level: "12th",
+        resultTitle: "Personalized 12th Grade Blueprint",
+        resultSummary: `Board: ${data12th.board}, Interest: ${data12th.interest}, Study Time: ${data12th.studyTime}`,
+        raw: { data12th }
+      });
+    }
+
+    // --- UNDERGRADUATE (UG) FLOW ---
+    let dataUG = {
+      degree: "",
+      specialization: "",
+      year: "",
+      careerGoal: "",
+      skills: [],
+      interest: "",
+      effort: "",
+      priority: ""
+    };
+
+    function startUGFlow() {
+      dataUG = {
+        degree: "",
+        specialization: "",
+        year: "",
+        careerGoal: "",
+        skills: [],
+        interest: "",
+        effort: "",
+        priority: ""
+      };
+
+      document.querySelector('.hero-content').innerHTML = `
+    <h2 class="hero-title" style="font-size: 2.5rem;">SECTION 1: Degree Information</h2>
+    <p class="hero-sub">What degree are you currently pursuing?</p>
+    <div class="quiz-options" style="flex-direction: column; gap: 1rem; align-items: center; margin-top: 2rem;">
+      <button class="btn secondary" style="width: 300px" onclick="setUGDegree('B.Tech / BE')">B.Tech / BE</button>
+      <button class="btn secondary" style="width: 300px" onclick="setUGDegree('B.Com')">B.Com</button>
+      <button class="btn secondary" style="width: 300px" onclick="setUGDegree('BBA')">BBA</button>
+      <button class="btn secondary" style="width: 300px" onclick="setUGDegree('BA')">BA</button>
+      <button class="btn secondary" style="width: 300px" onclick="setUGDegree('B.Sc')">B.Sc</button>
+      <div style="display: flex; gap: 1rem; align-items: center; justify-content: center; width: 100%;">
+        <input type="text" id="other-degree" placeholder="Other (input)" style="padding: 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); width: 200px; background: rgba(255,255,255,0.05); color: white; font-size: 1rem;">
+        <button class="btn primary" onclick="setUGDegree(document.getElementById('other-degree').value)">Submit</button>
+      </div>
+    </div>
+  `;
+    }
+
+    function setUGDegree(degree) {
+      if (!degree || !degree.trim()) return;
+      dataUG.degree = degree;
+
+      document.querySelector('.hero-content').innerHTML = `
+    <h2 class="hero-title" style="font-size: 2.5rem;">SECTION 1: Degree Information</h2>
+    <p class="hero-sub">What is your specialization/major?</p>
+    <div class="quiz-options" style="flex-direction: column; gap: 1.5rem; align-items: center; margin-top: 2rem;">
+      <div style="display: flex; gap: 1rem; align-items: center;">
+        <input type="text" id="ug-specialization" placeholder="e.g. Computer Science, Finance" style="padding: 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); width: 300px; background: rgba(255,255,255,0.05); color: white; font-size: 1rem;">
+        <button class="btn primary" onclick="setUGSpecialization(document.getElementById('ug-specialization').value)">Next ➔</button>
+      </div>
+    </div>
+  `;
+    }
+
+    function setUGSpecialization(spec) {
+      if (!spec || !spec.trim()) spec = "General";
+      dataUG.specialization = spec;
+      askUGYear();
+    }
+
+    function askUGYear() {
+      const years = ["1st Year", "2nd Year", "3rd Year", "Final Year"];
+      document.querySelector('.hero-content').innerHTML = `
+    <h2 class="hero-title" style="font-size: 2.5rem;">SECTION 2: Current Year</h2>
+    <p class="hero-sub">Which year are you in?</p>
+    <div class="quiz-options" style="flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 2rem;">
+      ${years.map(y => `<button class="btn secondary" style="width: 150px" onclick="setUGYear('${y}')">${y}</button>`).join('')}
+    </div>
+  `;
+    }
+
+    function setUGYear(year) {
+      dataUG.year = year;
+      askUGCareerGoal();
+    }
+
+    function askUGCareerGoal() {
+      const goals = [
+        "Job / Placement",
+        "Higher studies (India)",
+        "Higher studies (Abroad)",
+        "Government exams",
+        "Business / Startup",
+        "Not sure"
+      ];
+      document.querySelector('.hero-content').innerHTML = `
+    <h2 class="hero-title" style="font-size: 2.5rem;">SECTION 3: Career Goal</h2>
+    <p class="hero-sub">What are you planning after graduation?</p>
+    <div class="quiz-options" style="flex-direction: column; gap: 1rem; align-items: center; margin-top: 2rem;">
+      ${goals.map(g => `<button class="btn secondary" style="width: 300px" onclick="setUGCareerGoal('${g}')">${g}</button>`).join('')}
+    </div>
+  `;
+    }
+
+    function setUGCareerGoal(goal) {
+      dataUG.careerGoal = goal;
+      askUGSkills();
+    }
+
+    function askUGSkills() {
+      const skills = [
+        "Coding / Programming", "Communication", "Analytical / Problem-solving",
+        "Creativity / Design", "Leadership / Management", "Finance / Accounting", "Research / Writing"
+      ];
+      let skillsHtml = skills.map(sk => `
+    <button class="btn secondary subj-btn" onclick="toggleUGSkill(this, '${sk}')" style="margin: 0.5rem">${sk}</button>
+  `).join('');
+
+      document.querySelector('.hero-content').innerHTML = `
+    <h2 class="hero-title" style="font-size: 2.5rem;">SECTION 4: Skills & Strengths</h2>
+    <p class="hero-sub">(Multi-select) Select all that apply</p>
+    <div class="quiz-options" style="flex-wrap: wrap; justify-content: center; max-width: 800px; margin: 2rem auto;">
+      ${skillsHtml}
+    </div>
+    <div class="hero-buttons" style="margin-top: 2rem;">
+      <button class="btn primary" onclick="submitUGSkills()">Next Step ➔</button>
+    </div>
+  `;
+    }
+
+    function toggleUGSkill(btn, skill) {
+      btn.classList.toggle('primary');
+      btn.classList.toggle('secondary');
+      if (dataUG.skills.includes(skill)) {
+        dataUG.skills = dataUG.skills.filter(s => s !== skill);
+      } else {
+        dataUG.skills.push(skill);
+      }
+    }
+
+    function submitUGSkills() {
+      askUGInterest();
+    }
+
+    function askUGInterest() {
+      const interests = [
+        "Tech & Development", "Business & Finance", "Creative fields",
+        "Public service", "Research & academics", "Entrepreneurship"
+      ];
+      document.querySelector('.hero-content').innerHTML = `
+    <h2 class="hero-title" style="font-size: 2.5rem;">SECTION 5: Interest Area</h2>
+    <p class="hero-sub">What kind of work do you enjoy?</p>
+    <div class="quiz-options" style="flex-direction: column; gap: 1rem; align-items: center; margin-top: 2rem;">
+      ${interests.map(i => `<button class="btn secondary" style="width: 300px" onclick="setUGInterest('${i}')">${i}</button>`).join('')}
+    </div>
+  `;
+    }
+
+    function setUGInterest(interest) {
+      dataUG.interest = interest;
+      askUGEffort();
+    }
+
+    function askUGEffort() {
+      const efforts = ["< 2 hrs", "2–4 hrs", "4–6 hrs", "6+ hrs"];
+      document.querySelector('.hero-content').innerHTML = `
+    <h2 class="hero-title" style="font-size: 2.5rem;">SECTION 6: Effort Level</h2>
+    <p class="hero-sub">How much time can you invest daily to improve your career?</p>
+    <div class="quiz-options" style="flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 2rem;">
+      ${efforts.map(e => `<button class="btn secondary" style="width: 150px" onclick="setUGEffort('${e}')">${e}</button>`).join('')}
+    </div>
+  `;
+    }
+
+    function setUGEffort(effort) {
+      dataUG.effort = effort;
+      askUGPriority();
+    }
+
+    function askUGPriority() {
+      const priorities = ["High salary", "Passion", "Stability", "Work-life balance", "Going abroad"];
+      document.querySelector('.hero-content').innerHTML = `
+    <h2 class="hero-title" style="font-size: 2.5rem;">SECTION 7: Priority</h2>
+    <p class="hero-sub">What matters most to you?</p>
+    <div class="quiz-options" style="flex-direction: column; gap: 1rem; align-items: center; margin-top: 2rem;">
+      ${priorities.map(p => `<button class="btn secondary" style="width: 300px" onclick="setUGPriority('${p}')">${p}</button>`).join('')}
+    </div>
+  `;
+    }
+
+    function setUGPriority(priority) {
+      dataUG.priority = priority;
+      generateUGResultV2();
+    }
+
+    function generateUGResultV2() {
+      let paths = [];
+      let skillsToBuild = "";
+      let exams = [];
+      let actionPlan = "";
+      let smartAdvice = "";
+      let degreeAdvice = "";
+      let roadmap = {};
+      let scores = { tech: 0, business: 0, creative: 0, public: 0, research: 0 };
+
+      if (dataUG.degree.includes("Tech") || dataUG.interest === "Tech & Development") {
+        paths = ["Software Developer", "Data Analyst", "Product Manager"];
+        skillsToBuild = "DSA, web development, projects, and system design.";
+        scores.tech += 4;
+      } else if (dataUG.degree.includes("Com") || dataUG.interest === "Business & Finance") {
+        paths = ["Chartered Accountant", "Financial Analyst", "Marketing Manager"];
+        skillsToBuild = "Accounting, taxation, and financial modeling.";
+        scores.business += 4;
+      } else if (dataUG.interest === "Creative fields") {
+        paths = ["UI/UX Designer", "Digital Marketer", "Content Strategist"];
+        skillsToBuild = "Portfolio building, communication, and applied creativity.";
+        scores.creative += 4;
+      } else if (dataUG.careerGoal === "Government exams" || dataUG.interest === "Public service") {
+        paths = ["UPSC Aspirant", "Bank PO", "State PSC Officer"];
+        skillsToBuild = "Current affairs, aptitude, and consistency.";
+        scores.public += 4;
+      } else if (dataUG.interest === "Research & academics") {
+        paths = ["Researcher", "Professor / Academic", "Subject Matter Expert"];
+        skillsToBuild = "Research writing, conceptual depth, and academic rigor.";
+        scores.research += 4;
+      } else {
+        paths = ["Business Analyst", "Operations Manager", "Consultant"];
+        skillsToBuild = "Communication, Excel, analytics, and leadership.";
+        scores.business += 2;
+        scores.tech += 1;
+      }
+
+      if (dataUG.interest === "Tech & Development") scores.tech += 3;
+      if (dataUG.interest === "Business & Finance") scores.business += 3;
+      if (dataUG.interest === "Creative fields") scores.creative += 3;
+      if (dataUG.interest === "Public service") scores.public += 3;
+      if (dataUG.interest === "Research & academics") scores.research += 3;
+      if (dataUG.interest === "Entrepreneurship") scores.business += 2;
+
+      if (dataUG.careerGoal === "Government exams") scores.public += 3;
+      if (dataUG.careerGoal.includes("Higher studies")) scores.research += 2;
+      if (dataUG.careerGoal.includes("Job")) scores.tech += 1;
+
+      if (dataUG.priority === "High salary") { scores.tech += 1; scores.business += 1; }
+      if (dataUG.priority === "Passion") scores.creative += 1;
+      if (dataUG.priority === "Stability") scores.public += 1;
+      if (dataUG.priority === "Going abroad") { scores.research += 1; scores.tech += 1; }
+
+      if (dataUG.careerGoal.includes("Job")) {
+        exams.push("Placement preparation: aptitude, coding/role skills, and interviews.");
+      } else if (dataUG.careerGoal.includes("Higher studies")) {
+        if (dataUG.degree.includes("Tech") && dataUG.careerGoal.includes("India")) {
+          exams.push("Higher studies in India: GATE, CAT.");
+        } else if (dataUG.careerGoal.includes("Abroad")) {
+          exams.push("Higher studies abroad: GRE, GMAT, TOEFL/IELTS.");
+        } else {
+          exams.push("Higher studies: CAT, CUET-PG, XAT.");
+        }
+      } else if (dataUG.careerGoal === "Government exams") {
+        exams.push("Government exams: UPSC CSE, SSC CGL, IBPS PO.");
+      } else {
+        exams.push("Focus more on internships and networking than exam-heavy prep.");
+      }
+
+      if (dataUG.degree.includes("Tech")) {
+        degreeAdvice = "Build project depth and placement readiness in parallel with academics.";
+      } else if (dataUG.degree.includes("Com") || dataUG.degree.includes("BBA")) {
+        degreeAdvice = "Balance finance and management fundamentals with practical exposure.";
+      } else {
+        degreeAdvice = "Strengthen domain expertise and communication for a clear profile.";
+      }
+
+      roadmap = {
+        start: dataUG.year === "Final Year" ? "Treat this semester as execution mode for placements/exams." : "Start building a focused profile from this semester itself.",
+        daily: "Maintain a routine of " + dataUG.effort + " focused effort.",
+        focus: skillsToBuild,
+        coaching: dataUG.careerGoal.includes("Higher studies") || dataUG.careerGoal === "Government exams"
+          ? "Use guided prep with mocks, deadlines, and review cycles."
+          : "Use internships, projects, and mentor feedback as your growth system."
+      };
+
+      actionPlan = `
+    <b>What to do this month:</b> Set a routine and fix your biggest weak point.<br>
+    <b>What to do in 6 months:</b> Complete 2 strong projects or one serious internship.<br>
+    <b>Before graduation:</b> Final resume ready, mocks done, and target opportunity shortlisted.
+  `;
+
+      if (dataUG.careerGoal === "Not sure") {
+        smartAdvice = "<b>Advice:</b> Explore through internships and mentor conversations before committing.";
+      } else if (dataUG.effort === "< 2 hrs") {
+        smartAdvice = "<b>Advice:</b> Effort is currently low for competitive goals. Increase consistency gradually.";
+      } else if (dataUG.effort === "6+ hrs" && (dataUG.priority === "High salary" || dataUG.priority === "Going abroad")) {
+        smartAdvice = "<b>Advice:</b> Your effort matches ambition. Keep this momentum and review progress weekly.";
+      } else {
+        smartAdvice = "<b>Advice:</b> Stay consistent and keep one backup plan active.";
+      }
+
+      const labelMap = {
+        tech: { icon: "💻", label: "Technology & Product" },
+        business: { icon: "💼", label: "Business & Finance" },
+        creative: { icon: "🎨", label: "Creative & Media" },
+        public: { icon: "🏛️", label: "Public Service" },
+        research: { icon: "📚", label: "Research & Academics" }
+      };
+      const totalScore = Object.values(scores).reduce((a, b) => a + b, 0) || 1;
+      const topClusters = Object.entries(scores).sort((a, b) => b[1] - a[1]);
+      const matchHtml = topClusters.map(([key, val]) => {
+        const pct = Math.round((val / totalScore) * 100);
+        if (pct === 0) return "";
+        const meta = labelMap[key];
+        return `
+        <div style="margin-bottom: 1rem;">
+          <div style="display:flex; justify-content:space-between; margin-bottom:0.25rem; font-size:1rem; color:rgba(255,255,255,0.9);">
+            <span>${meta.icon} ${meta.label}</span>
+            <strong>${pct}%</strong>
+          </div>
+          <div style="width: 100%; background: rgba(255,255,255,0.1); border-radius: 4px; height: 6px; overflow: hidden;">
+            <div style="width: ${pct}%; height: 100%; background: #64ffda;"></div>
+          </div>
+        </div>`;
+      }).join('') + `
+      <div style="margin-top: 1rem; opacity: 0.9;">
+        <div><b>Degree + Specialization:</b> ${dataUG.degree} (${dataUG.specialization})</div>
+        <div><b>Primary Goal:</b> ${dataUG.careerGoal}</div>
+      </div>`;
+
+      document.querySelector('.hero-content').innerHTML = `
+    <h2 class="hero-title" style="font-size: 2.5rem; margin-bottom: 1rem;">Your Personalized Undergraduate Blueprint</h2>
+    <div style="text-align: left; background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); max-width: 800px; margin: 0 auto; line-height: 1.6;">
+      <h3 style="color: #64ffda; font-size: 1.5rem; margin-top: 0;">Degree Strategy (${dataUG.degree})</h3>
+      <div style="background: rgba(100, 255, 218, 0.1); border-left: 4px solid #64ffda; padding: 1.5rem; border-radius: 4px; margin-bottom: 2rem; font-size: 1.1rem;">${degreeAdvice}</div>
+      <h3 style="color: #64ffda; font-size: 1.5rem; margin-top: 0;">1. Career Direction Match</h3>
+      <div style="margin-bottom: 2rem; padding: 1.5rem; background: rgba(0,0,0,0.2); border-radius: 8px;">${matchHtml}</div>
+      <h3 style="color: #64ffda; margin-top: 0; font-size: 1.5rem;">2. Suggested Career Paths</h3>
+      <ul style="margin-bottom: 1.5rem; padding-left: 1.5rem; font-size: 1.1rem; color: rgba(255,255,255,0.9);">${paths.map(p => `<li style="margin-bottom: 0.5rem;">${p}</li>`).join('')}</ul>
+      <h3 style="color: #64ffda; font-size: 1.5rem;">3. Relevant Exams</h3>
+      <ul style="margin-bottom: 1.5rem; padding-left: 1.5rem; font-size: 1.1rem; color: rgba(255,255,255,0.9);">${exams.map(e => `<li style="margin-bottom: 0.5rem;">${e}</li>`).join('')}</ul>
+      <h3 style="color: #64ffda; font-size: 1.5rem;">4. Preparation Roadmap</h3>
+      <ul style="margin-bottom: 1.5rem; padding-left: 1.5rem; font-size: 1.1rem; color: rgba(255,255,255,0.9);">
+        <li style="margin-bottom: 0.5rem;"><b>Immediate Action:</b> ${roadmap.start}</li>
+        <li style="margin-bottom: 0.5rem;"><b>Daily Plan:</b> ${roadmap.daily}</li>
+        <li style="margin-bottom: 0.5rem;"><b>Core Skill Focus:</b> ${roadmap.focus}</li>
+        <li style="margin-bottom: 0.5rem;"><b>Prep Mode:</b> ${roadmap.coaching}</li>
+      </ul>
+      <h3 style="color: #64ffda; font-size: 1.5rem;">5. Action Plan</h3>
+      <p style="margin-bottom: 1.5rem; font-size: 1.1rem; color: rgba(255,255,255,0.9); line-height: 1.8;">${actionPlan}</p>
+      <div style="background: rgba(255, 193, 7, 0.1); border-left: 4px solid #ffc107; padding: 1.5rem; border-radius: 4px; margin-top: 2rem; font-size: 1.1rem;">${smartAdvice}</div>
+    </div>
+    <div class="hero-buttons" style="margin-top: 2.5rem;"><button class="btn primary" onclick="location.reload()">Start Again</button></div>
+  `;
+
+      document.querySelector('.hero-content').scrollIntoView({ behavior: 'smooth' });
+      saveQuizResultToBackend({
+        level: "UG",
+        resultTitle: "Personalized Undergraduate Blueprint",
+        resultSummary: `Degree: ${dataUG.degree}, Goal: ${dataUG.careerGoal}, Interest: ${dataUG.interest}`,
+        raw: { dataUG }
+      });
+    }
+
+    function generateUGResult() {
+      return generateUGResultV2();
+    }
+
+    // --- POSTGRADUATE (PG) FLOW ---
+    let dataPG = {
+      degree: "",
+      specialization: "",
+      status: "",
+      direction: "",
+      strengths: [],
+      workPref: "",
+      risk: "",
+      effort: "",
+      priority: ""
+    };
+
+    function startPGFlow() {
+      dataPG = { degree: "", specialization: "", status: "", direction: "", strengths: [], workPref: "", risk: "", effort: "", priority: "" };
+
+      document.querySelector('.hero-content').innerHTML = `
+    <h2 class="hero-title" style="font-size: 2.5rem;">SECTION 1: PG Degree Info</h2>
+    <p class="hero-sub">What postgraduate degree are you pursuing/completed?</p>
+    <div class="quiz-options" style="flex-direction: column; gap: 1rem; align-items: center; margin-top: 2rem;">
+      <button class="btn secondary" style="width: 300px" onclick="setPGDegree('M.Tech / ME')">M.Tech / ME</button>
+      <button class="btn secondary" style="width: 300px" onclick="setPGDegree('MBA')">MBA</button>
+      <button class="btn secondary" style="width: 300px" onclick="setPGDegree('M.Com')">M.Com</button>
+      <button class="btn secondary" style="width: 300px" onclick="setPGDegree('MA')">MA</button>
+      <button class="btn secondary" style="width: 300px" onclick="setPGDegree('M.Sc')">M.Sc</button>
+      <div style="display: flex; gap: 1rem; align-items: center; justify-content: center; width: 100%;">
+        <input type="text" id="other-pg-degree" placeholder="Other (input)" style="padding: 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); width: 200px; background: rgba(255,255,255,0.05); color: white; font-size: 1rem;">
+        <button class="btn primary" onclick="setPGDegree(document.getElementById('other-pg-degree').value)">Submit</button>
+      </div>
+    </div>
+  `;
+    }
+
+    function setPGDegree(degree) {
+      if (!degree || !degree.trim()) return;
+      dataPG.degree = degree;
+
+      document.querySelector('.hero-content').innerHTML = `
+    <h2 class="hero-title" style="font-size: 2.5rem;">SECTION 1: PG Degree Info</h2>
+    <p class="hero-sub">What is your specialization?</p>
+    <div class="quiz-options" style="flex-direction: column; gap: 1.5rem; align-items: center; margin-top: 2rem;">
+      <div style="display: flex; gap: 1rem; align-items: center;">
+        <input type="text" id="pg-specialization" placeholder="e.g. AI, Finance, History" style="padding: 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); width: 300px; background: rgba(255,255,255,0.05); color: white; font-size: 1rem;">
+        <button class="btn primary" onclick="setPGSpecialization(document.getElementById('pg-specialization').value)">Next ➔</button>
+      </div>
+    </div>
+  `;
+    }
+
+    function setPGSpecialization(spec) {
+      if (!spec || !spec.trim()) spec = "General";
+      dataPG.specialization = spec;
+      askPGStatus();
+    }
+
+    function askPGStatus() {
+      const statuses = ["1st Year PG", "Final Year PG", "Completed PG"];
+      document.querySelector('.hero-content').innerHTML = `
+    <h2 class="hero-title" style="font-size: 2.5rem;">SECTION 2: Current Status</h2>
+    <p class="hero-sub">What is your current stage?</p>
+    <div class="quiz-options" style="flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 2rem;">
+      ${statuses.map(s => `<button class="btn secondary" style="width: 150px" onclick="setPGStatus('${s}')">${s}</button>`).join('')}
+    </div>
+  `;
+    }
+
+    function setPGStatus(status) {
+      dataPG.status = status;
+      askPGDirection();
+    }
+
+    function askPGDirection() {
+      const dirs = [
+        "High-paying job", "Research / PhD", "Government job",
+        "Switch career field", "Start a business", "Go abroad", "Not sure"
+      ];
+      document.querySelector('.hero-content').innerHTML = `
+    <h2 class="hero-title" style="font-size: 2.5rem;">SECTION 3: Career Direction</h2>
+    <p class="hero-sub">What do you want to do next?</p>
+    <div class="quiz-options" style="flex-direction: column; gap: 1rem; align-items: center; margin-top: 2rem;">
+      ${dirs.map(d => `<button class="btn secondary" style="width: 300px" onclick="setPGDirection('${d}')">${d}</button>`).join('')}
+    </div>
+  `;
+    }
+
+    function setPGDirection(dir) {
+      dataPG.direction = dir;
+      askPGStrengths();
+    }
+
+    function askPGStrengths() {
+      const strengths = [
+        "Technical expertise", "Research & analysis", "Communication",
+        "Leadership / management", "Teaching / mentoring", "Creativity / innovation"
+      ];
+      let html = strengths.map(sk => `
+    <button class="btn secondary subj-btn" onclick="togglePGStrength(this, '${sk}')" style="margin: 0.5rem">${sk}</button>
+  `).join('');
+
+      document.querySelector('.hero-content').innerHTML = `
+    <h2 class="hero-title" style="font-size: 2.5rem;">SECTION 4: Core Strengths</h2>
+    <p class="hero-sub">(Multi-select) Select all that apply</p>
+    <div class="quiz-options" style="flex-wrap: wrap; justify-content: center; max-width: 800px; margin: 2rem auto;">
+      ${html}
+    </div>
+    <div class="hero-buttons" style="margin-top: 2rem;">
+      <button class="btn primary" onclick="submitPGStrengths()">Next Step ➔</button>
+    </div>
+  `;
+    }
+
+    function togglePGStrength(btn, str) {
+      btn.classList.toggle('primary');
+      btn.classList.toggle('secondary');
+      if (dataPG.strengths.includes(str)) {
+        dataPG.strengths = dataPG.strengths.filter(s => s !== str);
+      } else {
+        dataPG.strengths.push(str);
+      }
+    }
+
+    function submitPGStrengths() {
+      askPGWorkPref();
+    }
+
+    function askPGWorkPref() {
+      const prefs = [
+        "Corporate job", "Startup environment", "Academic / research",
+        "Government sector", "Freelancing / independent"
+      ];
+      document.querySelector('.hero-content').innerHTML = `
+    <h2 class="hero-title" style="font-size: 2.5rem;">SECTION 5: Work Preference</h2>
+    <p class="hero-sub">What kind of work do you prefer?</p>
+    <div class="quiz-options" style="flex-direction: column; gap: 1rem; align-items: center; margin-top: 2rem;">
+      ${prefs.map(p => `<button class="btn secondary" style="width: 300px" onclick="setPGWorkPref('${p}')">${p}</button>`).join('')}
+    </div>
+  `;
+    }
+
+    function setPGWorkPref(pref) {
+      dataPG.workPref = pref;
+      askPGRisk();
+    }
+
+    function askPGRisk() {
+      const risks = ["Low (safe career)", "Medium", "High (startup / switch / abroad)"];
+      document.querySelector('.hero-content').innerHTML = `
+    <h2 class="hero-title" style="font-size: 2.5rem;">SECTION 6: Effort & Risk</h2>
+    <p class="hero-sub">How much risk can you take?</p>
+    <div class="quiz-options" style="flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 2rem;">
+      ${risks.map(r => `<button class="btn secondary" style="width: 250px" onclick="setPGRisk('${r}')">${r}</button>`).join('')}
+    </div>
+  `;
+    }
+
+    function setPGRisk(risk) {
+      dataPG.risk = risk;
+      askPGEffort();
+    }
+
+    function askPGEffort() {
+      const efforts = ["< 2 hrs", "2–4 hrs", "4–6 hrs", "6+ hrs"];
+      document.querySelector('.hero-content').innerHTML = `
+    <h2 class="hero-title" style="font-size: 2.5rem;">SECTION 6: Effort Level</h2>
+    <p class="hero-sub">How many hours can you invest daily to improve your career?</p>
+    <div class="quiz-options" style="flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 2rem;">
+      ${efforts.map(e => `<button class="btn secondary" style="width: 150px" onclick="setPGEffort('${e}')">${e}</button>`).join('')}
+    </div>
+  `;
+    }
+
+    function setPGEffort(effort) {
+      dataPG.effort = effort;
+      askPGPriority();
+    }
+
+    function askPGPriority() {
+      const priorities = ["Salary growth", "Job stability", "Passion", "Global opportunities", "Prestige / position"];
+      document.querySelector('.hero-content').innerHTML = `
+    <h2 class="hero-title" style="font-size: 2.5rem;">SECTION 7: Priority</h2>
+    <p class="hero-sub">What matters most?</p>
+    <div class="quiz-options" style="flex-direction: column; gap: 1rem; align-items: center; margin-top: 2rem;">
+      ${priorities.map(p => `<button class="btn secondary" style="width: 300px" onclick="setPGPriority('${p}')">${p}</button>`).join('')}
+    </div>
+  `;
+    }
+
+    function setPGPriority(priority) {
+      dataPG.priority = priority;
+      generatePGResultV2();
+    }
+
+    function generatePGResultV2() {
+      let paths = [];
+      let skillsToBuild = "";
+      let exams = [];
+      let actionPlan = "";
+      let smartAdvice = "";
+      let degreeAdvice = "";
+      let roadmap = {};
+      let scores = { research: 0, government: 0, entrepreneurship: 0, corporate: 0, domain: 0 };
+
+      if (dataPG.direction === "Research / PhD" || dataPG.workPref === "Academic / research") {
+        paths = ["Lecturer / Professor", "Research Scientist", "Postdoctoral Fellow"];
+        scores.research += 4;
+      } else if (dataPG.direction === "Government job") {
+        paths = ["UPSC Civil Services", "PSU Officer", "State PSC Officer"];
+        scores.government += 4;
+      } else if (dataPG.direction === "Start a business") {
+        paths = ["Startup Founder", "Consultant", "Freelancer"];
+        scores.entrepreneurship += 4;
+      } else if (dataPG.degree.includes("Tech") || dataPG.degree.includes("Sc")) {
+        paths = ["AI Engineer / Data Scientist", "Senior Software Architect", "Product Manager"];
+        scores.corporate += 3;
+        scores.domain += 2;
+      } else if (dataPG.degree.includes("MBA") || dataPG.degree.includes("Com")) {
+        paths = ["Investment Banker", "Management Consultant", "Finance Director"];
+        scores.corporate += 4;
+      } else {
+        paths = ["Policy Analyst", "Senior Editor", "NGO Director"];
+        scores.domain += 4;
+      }
+
+      if (dataPG.direction === "Research / PhD") scores.research += 3;
+      if (dataPG.direction === "Government job") scores.government += 3;
+      if (dataPG.direction === "Start a business") scores.entrepreneurship += 3;
+      if (dataPG.direction === "High-paying job") scores.corporate += 3;
+      if (dataPG.direction === "Switch career field") scores.domain += 2;
+
+      if (dataPG.priority === "Global opportunities") scores.corporate += 1;
+      if (dataPG.priority === "Job stability") scores.government += 1;
+      if (dataPG.priority === "Prestige / position") scores.corporate += 1;
+
+      if (dataPG.degree.includes("Tech") || dataPG.degree.includes("Sc")) {
+        skillsToBuild = "System design, AI/ML, cloud, and advanced analytical execution.";
+      } else if (dataPG.degree.includes("MBA")) {
+        skillsToBuild = "Strategy, analytics, leadership, and financial decision-making.";
+      } else if (dataPG.degree.includes("Com")) {
+        skillsToBuild = "Taxation, auditing, corporate finance, and compliance.";
+      } else {
+        skillsToBuild = "Research, writing, policy analysis, and subject specialization.";
+      }
+
+      if (dataPG.direction === "Research / PhD" || dataPG.degree.includes("Tech")) {
+        exams.push("Research and higher studies: GATE, UGC NET, GRE (as needed).");
+      }
+      if (dataPG.direction === "Government job" || dataPG.priority === "Job stability") {
+        exams.push("Government path: UPSC CSE, SSC CGL, and state-level services exams.");
+      }
+      if (dataPG.direction === "High-paying job" || dataPG.degree.includes("MBA")) {
+        exams.push("Career growth: GMAT (if needed), PMP/Agile certifications.");
+      }
+      if (exams.length === 0) {
+        exams.push("No mandatory exam for now; focus on high-impact skills and outcomes.");
+      }
+
+      if (dataPG.degree.includes("Tech")) {
+        degreeAdvice = "Build advanced technical depth with real-world delivery and leadership signals.";
+      } else if (dataPG.degree.includes("MBA") || dataPG.degree.includes("Com")) {
+        degreeAdvice = "Strengthen strategic and financial decision-making with measurable business impact.";
+      } else {
+        degreeAdvice = "Position your domain expertise with strong communication and specialization evidence.";
+      }
+
+      roadmap = {
+        start: dataPG.status === "Completed PG" ? "Shift to execution mode for role upgrades, admissions, or pivot." : "Use your current academic stage to build a portfolio and targeted outcomes.",
+        daily: "Allocate " + dataPG.effort + " daily for focused progress.",
+        focus: skillsToBuild,
+        coaching: dataPG.direction === "Government job" || dataPG.direction === "Research / PhD"
+          ? "Use structured prep, mocks, and timeline-driven milestones."
+          : "Use projects, networking, and mentor reviews to accelerate growth."
+      };
+
+      actionPlan = `
+    <b>What to do this month:</b> Finalize your CV and shortlist 3 role or university targets.<br>
+    <b>What to do in 3-6 months:</b> Build one high-credibility output (certification, paper, or project).<br>
+    <b>Within 1 year:</b> Secure a strong role, PhD admission, or successful career pivot.
+  `;
+
+      if (dataPG.direction === "Not sure" || dataPG.direction === "Switch career field") {
+        smartAdvice = "<b>Advice:</b> Explore hybrid paths where your PG adds value while you transition.";
+      } else if (dataPG.priority === "Global opportunities" || dataPG.risk.includes("High")) {
+        smartAdvice = "<b>Advice:</b> Apply aggressively and prepare for high competition with stronger proof of work.";
+      } else if (dataPG.risk.includes("Low")) {
+        smartAdvice = "<b>Advice:</b> Focus on stable opportunities and maintain consistent execution.";
+      } else {
+        smartAdvice = "<b>Advice:</b> Leverage your postgraduate network to unlock better opportunities faster.";
+      }
+
+      const labelMap = {
+        research: { icon: "📚", label: "Research & Academic Track" },
+        government: { icon: "🏛️", label: "Government & Public Sector" },
+        entrepreneurship: { icon: "🚀", label: "Entrepreneurship & Independent Work" },
+        corporate: { icon: "💼", label: "Corporate Leadership Track" },
+        domain: { icon: "🎯", label: "Domain Specialization Track" }
+      };
+      const totalScore = Object.values(scores).reduce((a, b) => a + b, 0) || 1;
+      const topClusters = Object.entries(scores).sort((a, b) => b[1] - a[1]);
+      const matchHtml = topClusters.map(([key, val]) => {
+        const pct = Math.round((val / totalScore) * 100);
+        if (pct === 0) return "";
+        const meta = labelMap[key];
+        return `
+        <div style="margin-bottom: 1rem;">
+          <div style="display:flex; justify-content:space-between; margin-bottom:0.25rem; font-size:1rem; color:rgba(255,255,255,0.9);">
+            <span>${meta.icon} ${meta.label}</span>
+            <strong>${pct}%</strong>
+          </div>
+          <div style="width: 100%; background: rgba(255,255,255,0.1); border-radius: 4px; height: 6px; overflow: hidden;">
+            <div style="width: ${pct}%; height: 100%; background: #64ffda;"></div>
+          </div>
+        </div>`;
+      }).join('') + `
+      <div style="margin-top: 1rem; opacity: 0.9;">
+        <div><b>Degree + Specialization:</b> ${dataPG.degree} (${dataPG.specialization})</div>
+        <div><b>Current Status:</b> ${dataPG.status}</div>
+      </div>`;
+
+      document.querySelector('.hero-content').innerHTML = `
+    <h2 class="hero-title" style="font-size: 2.5rem; margin-bottom: 1rem;">Your Personalized Postgraduate Blueprint</h2>
+    <div style="text-align: left; background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); max-width: 800px; margin: 0 auto; line-height: 1.6;">
+      <h3 style="color: #64ffda; font-size: 1.5rem; margin-top: 0;">Degree Strategy (${dataPG.degree})</h3>
+      <div style="background: rgba(100, 255, 218, 0.1); border-left: 4px solid #64ffda; padding: 1.5rem; border-radius: 4px; margin-bottom: 2rem; font-size: 1.1rem;">${degreeAdvice}</div>
+      <h3 style="color: #64ffda; font-size: 1.5rem; margin-top: 0;">1. Career Direction Match</h3>
+      <div style="margin-bottom: 2rem; padding: 1.5rem; background: rgba(0,0,0,0.2); border-radius: 8px;">${matchHtml}</div>
+      <h3 style="color: #64ffda; margin-top: 0; font-size: 1.5rem;">2. Suggested Career Paths</h3>
+      <ul style="margin-bottom: 1.5rem; padding-left: 1.5rem; font-size: 1.1rem; color: rgba(255,255,255,0.9);">${paths.map(p => `<li style="margin-bottom: 0.5rem;">${p}</li>`).join('')}</ul>
+      <h3 style="color: #64ffda; font-size: 1.5rem;">3. Relevant Exams</h3>
+      <ul style="margin-bottom: 1.5rem; padding-left: 1.5rem; font-size: 1.1rem; color: rgba(255,255,255,0.9);">${exams.map(e => `<li style="margin-bottom: 0.5rem;">${e}</li>`).join('')}</ul>
+      <h3 style="color: #64ffda; font-size: 1.5rem;">4. Preparation Roadmap</h3>
+      <ul style="margin-bottom: 1.5rem; padding-left: 1.5rem; font-size: 1.1rem; color: rgba(255,255,255,0.9);">
+        <li style="margin-bottom: 0.5rem;"><b>Immediate Action:</b> ${roadmap.start}</li>
+        <li style="margin-bottom: 0.5rem;"><b>Daily Plan:</b> ${roadmap.daily}</li>
+        <li style="margin-bottom: 0.5rem;"><b>Core Skill Focus:</b> ${roadmap.focus}</li>
+        <li style="margin-bottom: 0.5rem;"><b>Prep Mode:</b> ${roadmap.coaching}</li>
+      </ul>
+      <h3 style="color: #64ffda; font-size: 1.5rem;">5. Action Plan</h3>
+      <p style="margin-bottom: 1.5rem; font-size: 1.1rem; color: rgba(255,255,255,0.9); line-height: 1.8;">${actionPlan}</p>
+      <div style="background: rgba(255, 193, 7, 0.1); border-left: 4px solid #ffc107; padding: 1.5rem; border-radius: 4px; margin-top: 2rem; font-size: 1.1rem;">${smartAdvice}</div>
+    </div>
+    <div class="hero-buttons" style="margin-top: 2.5rem;"><button class="btn primary" onclick="location.reload()">Start Again</button></div>
+  `;
+
+      document.querySelector('.hero-content').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function generatePGResult() {
+      return generatePGResultV2();
+    }
+  </script>
+
+  <script>
+    (function () {
+      const QUIZ_AI_BASE_URL = (() => {
+        const { protocol, hostname, origin } = window.location;
+        const isLocalhost = hostname === "localhost" || hostname === "127.0.0.1";
+
+        if (protocol === "file:" || isLocalhost) {
+          return "http://localhost:3000";
+        }
+
+        return origin;
+      })();
+
+      const QUIZ_BLUEPRINT_API_URL = `${QUIZ_AI_BASE_URL}/api/quiz-blueprint`;
+
+      function escapeQuizHtml(value) {
+        return String(value || "")
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#39;");
+      }
+
+      async function fetch12thBlueprintFromAI(answers) {
+        const headers = {
+          "Content-Type": "application/json"
+        };
+
+        if (typeof window.getFirebaseIdToken === "function") {
+          try {
+            const idToken = await window.getFirebaseIdToken(false);
+            headers.Authorization = `Bearer ${idToken}`;
+          } catch (_error) {
+            // Allow guest users to run the quiz blueprint generation.
+          }
+        }
+
+        const response = await fetch(QUIZ_BLUEPRINT_API_URL, {
+          method: "POST",
+          headers,
+          body: JSON.stringify({ level: "12th", answers })
+        });
+
+        const data = await response.json().catch(() => ({}));
+        if (!response.ok) {
+          throw new Error(data?.error || "Could not generate blueprint right now.");
+        }
+
+        if (!data?.blueprint || typeof data.blueprint !== "object") {
+          throw new Error("Invalid blueprint response from AI service.");
+        }
+
+        return data.blueprint;
+      }
+
+      function render12thBlueprintFromAI(blueprint) {
+        const directionRows = Array.isArray(blueprint?.careerDirectionMatch)
+          ? blueprint.careerDirectionMatch
+          : [];
+
+        const matchHtml =
+          directionRows
+            .map((entry) => {
+              const cluster = escapeQuizHtml(entry?.cluster || "Career Cluster");
+              const pctRaw = Number(entry?.percentage);
+              const pct = Number.isFinite(pctRaw) ? Math.max(0, Math.min(100, Math.round(pctRaw))) : 0;
+              if (pct <= 0) return "";
+
+              return `
+               <div style="margin-bottom: 1rem;">
+                 <div style="display:flex; justify-content:space-between; margin-bottom:0.25rem; font-size:1rem; color:rgba(255,255,255,0.9);">
+                   <span>${cluster}</span>
+                   <strong>${pct}%</strong>
+                 </div>
+                 <div style="width: 100%; background: rgba(255,255,255,0.1); border-radius: 4px; height: 6px; overflow: hidden;">
+                   <div style="width: ${pct}%; height: 100%; background: #64ffda;"></div>
+                 </div>
+               </div>`;
+            })
+            .join("") || `<div style="opacity:0.8;">No match data available.</div>`;
+
+        const clusters = blueprint?.careerClusters || {};
+        const clustersHtml = `
+          <li style="margin-bottom: 0.5rem; color: #64ffda;"><b>Primary Cluster:</b> ${escapeQuizHtml(clusters.primary || "Not specified")}</li>
+          <li style="margin-bottom: 0.5rem;"><b>Secondary Cluster:</b> ${escapeQuizHtml(clusters.secondary || "Not specified")}</li>
+          <li style="margin-bottom: 0.5rem; opacity: 0.8;"><b>Backup Cluster:</b> ${escapeQuizHtml(clusters.backup || "Not specified")}</li>
+        `;
+
+        const careers = Array.isArray(blueprint?.suggestedCareers) ? blueprint.suggestedCareers : [];
+        const exams = Array.isArray(blueprint?.relevantExams) ? blueprint.relevantExams : [];
+        const roadmap = blueprint?.roadmap || {};
+        const actionPlan = blueprint?.actionPlan || {};
+
+        document.querySelector(".hero-content").innerHTML = `
+      <h2 class="hero-title" style="font-size: 2.5rem; margin-bottom: 1rem;">Your Personalized 12th Grade Blueprint</h2>
+      
+      <div style="text-align: left; background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); max-width: 800px; margin: 0 auto; line-height: 1.6;">
+        <h3 style="color: #64ffda; font-size: 1.5rem; margin-top: 0;">Board Strategy (${escapeQuizHtml(data12th.board)})</h3>
+        <div style="background: rgba(100, 255, 218, 0.1); border-left: 4px solid #64ffda; padding: 1.5rem; border-radius: 4px; margin-bottom: 2rem; font-size: 1.1rem;">
+          ${escapeQuizHtml(blueprint?.boardStrategy || "Focus on board strength and aligned career planning.")}
+        </div>
+
+        <h3 style="color: #64ffda; font-size: 1.5rem; margin-top: 0;">1. Career Direction Match</h3>
+        <div style="margin-bottom: 2rem; padding: 1.5rem; background: rgba(0,0,0,0.2); border-radius: 8px;">
+          ${matchHtml}
+        </div>
+
+        <h3 style="color: #64ffda; margin-top: 0; font-size: 1.5rem;">2. Suggested Career Paths</h3>
+        <ul style="margin-bottom: 1.5rem; padding-left: 1.5rem; font-size: 1.1rem; color: rgba(255,255,255,0.9);">
+          ${clustersHtml}
+          <hr style="border: none; border-top: 1px solid rgba(255,255,255,0.1); margin: 1rem 0;">
+          ${(careers.length ? careers : ["No career suggestions available."]).map((c) => `<li style="margin-bottom: 0.5rem;">${escapeQuizHtml(c)}</li>`).join("")}
+        </ul>
+
+        <h3 style="color: #64ffda; font-size: 1.5rem;">3. Relevant Exams</h3>
+        <ul style="margin-bottom: 1.5rem; padding-left: 1.5rem; font-size: 1.1rem; color: rgba(255,255,255,0.9);">
+          ${(exams.length ? exams : ["No exam suggestions available."]).map((e) => `<li style="margin-bottom: 0.5rem;">${escapeQuizHtml(e)}</li>`).join("")}
+        </ul>
+
+        <h3 style="color: #64ffda; font-size: 1.5rem;">4. Preparation Roadmap</h3>
+        <ul style="margin-bottom: 1.5rem; padding-left: 1.5rem; font-size: 1.1rem; color: rgba(255,255,255,0.9);">
+          <li style="margin-bottom: 0.5rem;"><b>Immediate Action:</b> ${escapeQuizHtml(roadmap.immediateAction || "Finalize your top targets and plan.")}</li>
+          <li style="margin-bottom: 0.5rem;"><b>Daily Plan:</b> ${escapeQuizHtml(roadmap.dailyPlan || "Follow a fixed study routine.")}</li>
+          <li style="margin-bottom: 0.5rem;"><b>Key Focus Subjects:</b> ${escapeQuizHtml(roadmap.keyFocusSubjects || (data12th.subjects.join(", ") || "Core subjects"))}</li>
+          <li style="margin-bottom: 0.5rem;"><b>Prep Mode:</b> ${escapeQuizHtml(roadmap.prepMode || "Use revision, mocks, and doubt-solving.")}</li>
+        </ul>
+
+        <h3 style="color: #64ffda; font-size: 1.5rem;">5. Action Plan</h3>
+        <ul style="margin-bottom: 1.5rem; padding-left: 1.5rem; font-size: 1.1rem; color: rgba(255,255,255,0.9);">
+          <li style="margin-bottom: 0.5rem;"><b>Right Now (12th):</b> ${escapeQuizHtml(actionPlan.rightNow || "Balance boards and admissions prep.")}</li>
+          <li style="margin-bottom: 0.5rem;"><b>After Boards:</b> ${escapeQuizHtml(actionPlan.afterBoards || "Use counseling and admission timelines carefully.")}</li>
+        </ul>
+
+        <div style="background: rgba(255, 193, 7, 0.1); border-left: 4px solid #ffc107; padding: 1.5rem; border-radius: 4px; margin-top: 2rem; font-size: 1.1rem;">
+          ${escapeQuizHtml(blueprint?.smartSuggestion || "Stay consistent and review your weekly progress.")}
+        </div>
+      </div>
+
+      <div class="hero-buttons" style="margin-top: 2.5rem;">
+        <button class="btn primary" onclick="location.reload()">Start Again</button>
+      </div>
+    `;
+      }
+
+      window.generate12thResult = async function () {
+        document.querySelector(".hero-content").innerHTML = `
+      <h2 class="hero-title" style="font-size: 2.5rem; margin-bottom: 1rem;">Generating Your 12th Grade Blueprint...</h2>
+      <p class="hero-sub">Analyzing your full quiz responses with AI. This may take a few seconds.</p>
+    `;
+
+        try {
+          const blueprint = await fetch12thBlueprintFromAI(data12th);
+          render12thBlueprintFromAI(blueprint);
+
+          saveQuizResultToBackend({
+            level: "12th",
+            resultTitle: "Personalized 12th Grade Blueprint",
+            resultSummary: `Board: ${data12th.board}, Interest: ${data12th.interest}, Study Time: ${data12th.studyTime}`,
+            answers: data12th,
+            raw: { data12th, blueprint }
+          });
+        } catch (error) {
+          console.error("12th blueprint generation failed:", error);
+          document.querySelector(".hero-content").innerHTML = `
+      <h2 class="hero-title" style="font-size: 2.5rem; margin-bottom: 1rem;">Could Not Generate Blueprint</h2>
+      <p class="hero-sub">${escapeQuizHtml(error?.message || "AI service is unavailable right now. Please try again.")}</p>
+      <div class="hero-buttons" style="margin-top: 2rem;">
+        <button class="btn primary" onclick="generate12thResult()">Try Again</button>
+        <button class="btn secondary" onclick="start12thFlow()">Restart 12th Quiz</button>
+      </div>
+    `;
+        }
+      };
+    })();
+  </script>
+
+</body>
+
+</html>
+
+
+

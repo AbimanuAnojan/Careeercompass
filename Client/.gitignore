@@ -1,0 +1,15 @@
+﻿node_modules/
+.npm-cache/
+.cache/
+
+.env
+.env.*
+!.env.example
+
+service-account.json
+hello.json
+
+*.log
+dist/
+build/
+coverage/
