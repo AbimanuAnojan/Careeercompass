@@ -600,6 +600,24 @@
       return fallbackMessage;
     }
 
+    async function fetchWithTimeout(url, options = {}, timeoutMs = 35000) {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+      try {
+        return await fetch(url, {
+          ...options,
+          signal: controller.signal
+        });
+      } catch (error) {
+        if (error && error.name === "AbortError") {
+          throw new Error("AI request timed out. Please try again in a few seconds.");
+        }
+        throw error;
+      } finally {
+        clearTimeout(timeoutId);
+      }
+    }
+
     async function getAuthHeaders(forceRefresh = false) {
       if (typeof window.getFirebaseIdToken !== "function") {
         throw new Error("Authentication is not ready. Please refresh and login again.");
@@ -760,7 +778,7 @@
     async function fetchAIReply(message, history) {
       let response;
       try {
-        response = await fetch(CHAT_API_URL, {
+        response = await fetchWithTimeout(CHAT_API_URL, {
           method: "POST",
           headers: await getAuthHeaders(false),
           body: JSON.stringify({ message, history })
@@ -771,7 +789,7 @@
 
       let data = await response.json().catch(() => ({}));
       if (!response.ok && response.status === 401 && (data?.code || "").startsWith("auth/")) {
-        response = await fetch(CHAT_API_URL, {
+        response = await fetchWithTimeout(CHAT_API_URL, {
           method: "POST",
           headers: await getAuthHeaders(true),
           body: JSON.stringify({ message, history })
@@ -837,7 +855,7 @@
       } catch (error) {
         console.error("AI chat error:", error);
         typingText.style.display = "none";
-        addMessage("ai", `I could not reach the AI server at ${CHAT_API_URL}. Please ensure the backend is running and try again.`);
+        addMessage("ai", error?.message || `I could not reach the AI server at ${CHAT_API_URL}. Please ensure the backend is running and try again.`);
       } finally {
         sendBtn.disabled = false;
         isSendingMessage = false;
